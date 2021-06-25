@@ -1,0 +1,17 @@
+@keyframes arrow-up-down {
+  from {
+    transform: translateY(-7px) rotate(-90deg);
+  }
+  to {
+    transform: translateY(7px) rotate(-90deg);
+  }
+}
+
+@keyframes blinking-border {
+  from {
+    border-color: $white;
+  }
+  to {
+    border-color: transparent;
+  }
+}

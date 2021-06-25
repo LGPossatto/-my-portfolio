@@ -1,0 +1,15 @@
+.projects {
+  padding: 50px 0;
+
+  border-top: 3px solid $white;
+  border-bottom: 3px solid $white;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__cards {
+    @include project-card();
+  }
+}

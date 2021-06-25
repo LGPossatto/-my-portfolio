@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font;
+  color: $black;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $black;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+//-----------------------------------------------------------------//
+//---------------------------- HELPER -----------------------------//
+//-----------------------------------------------------------------//
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @include bp-big {
+    margin: 0 10%;
+  }
+
+  @include bp-tablet {
+    margin: 0 5%;
+  }
+}
+
+.hide-on-desktop {
+  @include bp-tablet-min {
+    display: none !important;
+  }
+}
+
+.hide-on-mobile {
+  @include bp-tablet {
+    display: none !important;
+  }
+}
+
+.ai {
+  &-c {
+    align-items: center;
+  }
+}
+
+.jc {
+  &-c {
+    justify-content: center;
+  }
+
+  &-sb {
+    justify-content: space-between;
+  }
+
+  &-se {
+    justify-content: space-evenly;
+  }
+}
+
+//-----------------------------------------------------------------//
+//----------------------------- FLEX ------------------------------//
+//-----------------------------------------------------------------//
+
+.flex {
+  display: flex;
+
+  &-fw-w {
+    flex-wrap: wrap;
+  }
+
+  &-fd-c {
+    flex-direction: column;
+  }
+}
+
+//-----------------------------------------------------------------//
+//----------------------------- GRID ------------------------------//
+//-----------------------------------------------------------------//
+
+.grid {
+  display: grid;
+
+  &-g-5 {
+    gap: 5rem;
+  }
+
+  &-gtc-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &-gc-s2 {
+    grid-column: span 2;
+  }
+
+  &-gc-all {
+    grid-column: 1 / -1;
+  }
+
+  &-gtr-3 {
+    grid-template-rows: repeat(3, 250px);
+  }
+
+  &-gr-s2 {
+    grid-row: span 2;
+  }
+
+  &-gr-all {
+    grid-row: 1 / -1;
+  }
+}
+
+//-----------------------------------------------------------------//
+//----------------------------- TEXT ------------------------------//
+//-----------------------------------------------------------------//
+
+// FONT SIZE
+.fs {
+  &-biggest {
+    font-size: 4.4rem;
+  }
+
+  &-bigger {
+    font-size: 3.6rem;
+  }
+
+  &-big {
+    font-size: 2.8rem;
+  }
+
+  &-med {
+    font-size: 2rem;
+  }
+
+  &-small {
+    font-size: 1.6rem;
+  }
+
+  &-smaller {
+    font-size: 1.2rem;
+  }
+
+  @include bp-med {
+    &-biggest {
+      font-size: 3.6rem;
+    }
+
+    &-bigger {
+      font-size: 2.8rem;
+    }
+
+    &-big {
+      font-size: 2rem;
+    }
+
+    &-med {
+      font-size: 1.6rem;
+    }
+
+    &-small {
+      font-size: 1.2rem;
+    }
+
+    &-smaller {
+      font-size: 1rem;
+    }
+  }
+
+  @include bp-tablet {
+    &-biggest {
+      font-size: 2.8rem;
+    }
+
+    &-bigger {
+      font-size: 2rem;
+    }
+
+    &-big {
+      font-size: 1.6rem;
+    }
+
+    &-med {
+      font-size: 1.2rem;
+    }
+
+    &-small {
+      font-size: 1rem;
+    }
+
+    &-smaller {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// FONT COLOR
+.fc {
+  &-light {
+    color: $white;
+  }
+}

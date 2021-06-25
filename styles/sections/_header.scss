@@ -1,0 +1,53 @@
+.header {
+  height: calc(100vh - 75px);
+
+  &__helper {
+    margin-bottom: 10%;
+  }
+
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__title {
+    width: max-content;
+    min-height: 53px;
+    margin: 0 auto;
+
+    @include bp-small {
+      min-height: 34px;
+      font-size: 2.8rem;
+    }
+  }
+
+  &__arrow {
+    margin: 10px 0 15px;
+
+    animation: arrow-up-down 1s ease-in infinite alternate;
+
+    @include bp-med {
+      width: 25px;
+      height: 27px;
+    }
+
+    @include bp-small {
+      width: 20px;
+      height: 22px;
+    }
+
+    @include bp-tablet {
+      width: 15px;
+      height: 17px;
+    }
+    line {
+      stroke: $white;
+    }
+  }
+}
+
+.animate-title {
+  border-right: 3px solid white;
+  padding-right: 5px;
+  animation: blinking-border 333ms ease infinite alternate;
+}

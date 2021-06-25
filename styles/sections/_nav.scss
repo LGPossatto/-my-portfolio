@@ -1,0 +1,89 @@
+.nav {
+  align-items: flex-end;
+
+  &__helper {
+    cursor: pointer;
+    position: relative;
+    width: max-content;
+
+    &:hover {
+      @include menu-btn();
+    }
+  }
+
+  &__menu {
+    position: relative;
+    z-index: 1;
+
+    background-color: $black;
+
+    width: max-content;
+    margin: 20px 0;
+    padding: 0.25em 0.5em;
+
+    border: 2px solid $white;
+    border-radius: 0.25em;
+
+    transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s;
+
+    & > h2 {
+      transition: color ease-in-out 0.25s;
+    }
+  }
+
+  &__items {
+    position: absolute;
+    top: 0;
+    right: -25px;
+
+    width: max-content;
+    height: 0px;
+    padding: 0 25px;
+
+    text-align: right;
+
+    & > h2 {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    & > :first-child,
+    & > :nth-child(2),
+    & > :last-child {
+      padding: 0.25em 0.5em;
+      opacity: 0;
+      transition: transform 0.25s ease-in, opacity 0.25s ease-in,
+        color 0.25s ease-in-out;
+    }
+
+    & > :first-child {
+      transform: translateY(75%);
+
+      &:hover {
+        color: $color-blue;
+      }
+    }
+
+    & > :nth-child(2) {
+      transform: translateY(-70%);
+
+      &:hover {
+        color: $color-red;
+      }
+    }
+
+    & > :last-child {
+      transform: translateY(-200%);
+
+      &:hover {
+        color: $color-green;
+      }
+    }
+  }
+}
+
+.menu-active {
+  @include bp-tablet {
+    @include menu-btn();
+  }
+}
