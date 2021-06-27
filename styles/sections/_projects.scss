@@ -1,15 +1,31 @@
 .projects {
-  padding: 50px 0;
+  position: relative;
+  margin: 100px 0;
 
-  border-top: 3px solid $white;
-  border-bottom: 3px solid $white;
+  &__line {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: $black;
+    width: 100%;
+
+    border-top: 5px solid $white;
+    border-bottom: 5px solid $white;
+    transform: skewY(-5deg);
+  }
 
   &__title {
     text-align: center;
-    margin-bottom: 25px;
+    padding: 100px 0 50px;
   }
 
   &__cards {
+    padding-bottom: 100px;
     @include project-card();
   }
 }

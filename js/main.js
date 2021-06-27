@@ -85,7 +85,9 @@ const projectsCards = document.getElementById("projects-cards").children;
 
 console.log(projectsCards);
 for (let i = 0; i < projectsCards.length; i++) {
-  projectsCards[i].addEventListener("click", () => {
-    projectsCards[i].classList.toggle("card-active");
+  projectsCards[i].addEventListener("click", (el) => {
+    if (el.target.nodeName !== "A" && el.target.nodeName !== "I") {
+      projectsCards[i].classList.toggle("card-active");
+    }
   });
 }

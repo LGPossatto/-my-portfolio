@@ -1,0 +1,63 @@
+.footer {
+  background-color: $black;
+  width: 100%;
+  padding: 25px 0;
+
+  border-top: 5px solid $white;
+
+  &__wrapper {
+    @include bp-tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__info {
+    margin: 10px;
+    text-align: center;
+
+    i {
+      margin: 10px;
+    }
+
+    .link-helper {
+      text-decoration: underline;
+      font-weight: 700;
+
+      transition: color 0.25s ease-in-out;
+
+      i {
+        transition: color 0.25s ease-in-out;
+      }
+
+      &-blue {
+        &:hover {
+          color: $color-blue;
+
+          i {
+            color: $color-blue;
+          }
+        }
+      }
+
+      &-red {
+        &:hover {
+          color: $color-red;
+
+          i {
+            color: $color-red;
+          }
+        }
+      }
+
+      &-green {
+        &:hover {
+          color: $color-green;
+
+          i {
+            color: $color-green;
+          }
+        }
+      }
+    }
+  }
+}
