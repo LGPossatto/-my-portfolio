@@ -1,0 +1,32 @@
+.parallax {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  background-color: saddlebrown;
+
+  &__icon {
+    position: relative;
+  }
+
+  // #505050
+  // #646464
+  // #787878
+  // #8c8c8c
+
+  .icon-react {
+    top: 5%;
+    left: 10%;
+
+    width: 10vw;
+    height: 10vw;
+
+    g {
+      @include color-svg-mixing(gray-to-blue, #505050, #61dafb);
+      animation: gray-to-blue 3s 1s ease-in-out forwards;
+    }
+  }
+}

@@ -64,6 +64,7 @@ html {
 }
 
 body {
+  position: relative;
   background-color: #141414;
 }
 
@@ -249,6 +250,50 @@ li {
 
 .fc-light {
   color: #fafafa;
+}
+
+.parallax {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: saddlebrown;
+}
+
+.parallax__icon {
+  position: relative;
+}
+
+.parallax .icon-react {
+  top: 5%;
+  left: 10%;
+  width: 10vw;
+  height: 10vw;
+}
+
+.parallax .icon-react g {
+  -webkit-animation: gray-to-blue 3s 1s ease-in-out forwards;
+          animation: gray-to-blue 3s 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes gray-to-blue {
+  from {
+    fill: #505050;
+  }
+  to {
+    fill: #61dafb;
+  }
+}
+
+@keyframes gray-to-blue {
+  from {
+    fill: #505050;
+  }
+  to {
+    fill: #61dafb;
+  }
 }
 
 .nav {

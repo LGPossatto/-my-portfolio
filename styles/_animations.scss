@@ -15,3 +15,14 @@
     border-color: transparent;
   }
 }
+
+@mixin color-svg-mixing($name, $color1, $color2) {
+  @keyframes #{$name} {
+    from {
+      fill: $color1;
+    }
+    to {
+      fill: $color2;
+    }
+  }
+}

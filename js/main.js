@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
         element.innerText = `${text.substring(0, textIndex)}`;
 
         if (textIndex >= text.length || textIndex < 0) {
-          console.log("loop done");
           clearInterval(addLetterLoop);
           resolve();
         }
@@ -83,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // ----------------------- projects cards ----------------------- //
 const projectsCards = document.getElementById("projects-cards").children;
 
-console.log(projectsCards);
 for (let i = 0; i < projectsCards.length; i++) {
   projectsCards[i].addEventListener("click", (el) => {
     if (el.target.nodeName !== "A" && el.target.nodeName !== "I") {
@@ -91,3 +89,14 @@ for (let i = 0; i < projectsCards.length; i++) {
     }
   });
 }
+
+// -------------------------- parallax --------------------------- //
+document.addEventListener("scroll", () => {
+  const parallaxElements = document.getElementById("parallax").children;
+
+  for (let i = 0; i < parallaxElements.length; i++) {
+    let pos = window.pageYOffset * parallaxElements[i].dataset.speed;
+
+    parallaxElements[i].style.transform = `translate3d(0px, ${pos}px, 0px)`;
+  }
+});
