@@ -16,13 +16,11 @@
   }
 }
 
-@mixin color-svg-mixing($name, $color1, $color2) {
-  @keyframes #{$name} {
-    from {
-      fill: $color1;
-    }
-    to {
-      fill: $color2;
-    }
+@keyframes opacityChange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

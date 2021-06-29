@@ -38,6 +38,24 @@
   }
 }
 
+@-webkit-keyframes opacityChange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityChange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -259,41 +277,121 @@ li {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: saddlebrown;
 }
 
 .parallax__icon {
-  position: relative;
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: opacityChange 1s ease-in-out forwards;
+          animation: opacityChange 1s ease-in-out forwards;
+}
+
+.parallax .icon-node {
+  top: 30%;
+  left: 75%;
+  width: 15vw;
+  height: 15vw;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.parallax .icon-graphql {
+  top: 65%;
+  left: 55%;
+  width: 15vw;
+  height: 15vw;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.parallax .icon-apollo {
+  top: 65%;
+  left: 55%;
+  width: 15vw;
+  height: 15vw;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.parallax .icon-mongodb {
+  top: 10%;
+  left: -5%;
+  width: 10vw;
+  height: 10vw;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.parallax .icon-firebase {
+  top: 65%;
+  left: 55%;
+  width: 10vw;
+  height: 10vw;
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+.parallax .icon-html {
+  top: 10%;
+  left: 90%;
+  width: 5vw;
+  height: 5vw;
+  -webkit-animation-delay: 3.25s;
+          animation-delay: 3.25s;
+}
+
+.parallax .icon-css {
+  top: 30%;
+  left: 75%;
+  width: 5vw;
+  height: 5vw;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.parallax .icon-sass {
+  top: 10%;
+  left: 90%;
+  width: 5vw;
+  height: 5vw;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.parallax .icon-javascript {
+  top: 30%;
+  left: 75%;
+  width: 5vw;
+  height: 5vw;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.parallax .icon-typescript {
+  top: 30%;
+  left: 75%;
+  width: 5vw;
+  height: 5vw;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
 }
 
 .parallax .icon-react {
-  top: 5%;
-  left: 10%;
-  width: 10vw;
-  height: 10vw;
+  top: 10%;
+  left: -5%;
+  width: 20vw;
+  height: 20vw;
+  -webkit-animation-delay: 2.75s;
+          animation-delay: 2.75s;
 }
 
-.parallax .icon-react g {
-  -webkit-animation: gray-to-blue 3s 1s ease-in-out forwards;
-          animation: gray-to-blue 3s 1s ease-in-out forwards;
-}
-
-@-webkit-keyframes gray-to-blue {
-  from {
-    fill: #505050;
-  }
-  to {
-    fill: #61dafb;
-  }
-}
-
-@keyframes gray-to-blue {
-  from {
-    fill: #505050;
-  }
-  to {
-    fill: #61dafb;
-  }
+.parallax .icon-redux {
+  top: 10%;
+  left: 90%;
+  width: 15vw;
+  height: 15vw;
+  -webkit-animation-delay: 3.75s;
+          animation-delay: 3.75s;
 }
 
 .nav {
@@ -680,6 +778,7 @@ li {
 }
 
 .profile p {
+  background-color: rgba(20, 20, 20, 0.5);
   margin-bottom: 100px;
 }
 
@@ -740,4 +839,47 @@ li {
 
 .footer__info .link-helper-green:hover i {
   color: #00ffbf;
+}
+
+.error {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.error__wrapper {
+  margin-bottom: 20%;
+}
+
+.error h1 {
+  margin: 50px;
+}
+
+.error span {
+  display: block;
+  margin: 20px;
+}
+
+.error a {
+  display: block;
+  background-color: #141414;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px auto;
+  padding: 0.25em 0.5em;
+  border: 2px solid #fafafa;
+  border-radius: 0.25em;
+  font-weight: 700;
+  -webkit-transition: background-color ease-in-out 0.25s, color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  transition: background-color ease-in-out 0.25s, color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s, color ease-in-out 0.25s;
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s, color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+}
+
+.error a:hover {
+  background-color: #fafafa;
+  -webkit-box-shadow: 0 0 7px white;
+          box-shadow: 0 0 7px white;
+  color: #141414;
 }

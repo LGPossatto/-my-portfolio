@@ -6,27 +6,118 @@
   left: 0;
   bottom: 0;
 
-  background-color: saddlebrown;
-
   &__icon {
-    position: relative;
+    position: absolute;
+
+    opacity: 0;
+    animation: opacityChange 1s ease-in-out forwards;
   }
 
-  // #505050
-  // #646464
-  // #787878
-  // #8c8c8c
+  .icon-node {
+    top: 30%;
+    left: 75%;
+    width: 15vw;
+    height: 15vw;
 
-  .icon-react {
-    top: 5%;
-    left: 10%;
+    animation-delay: 1s;
+  }
 
+  .icon-graphql {
+    top: 65%;
+    left: 55%;
+    width: 15vw;
+    height: 15vw;
+
+    animation-delay: 2s;
+  }
+
+  .icon-apollo {
+    top: 65%;
+    left: 55%;
+    width: 15vw;
+    height: 15vw;
+
+    animation-delay: 3s;
+  }
+
+  .icon-mongodb {
+    top: 10%;
+    left: -5%;
     width: 10vw;
     height: 10vw;
 
-    g {
-      @include color-svg-mixing(gray-to-blue, #505050, #61dafb);
-      animation: gray-to-blue 3s 1s ease-in-out forwards;
-    }
+    animation-delay: 1.25s;
+  }
+
+  .icon-firebase {
+    top: 65%;
+    left: 55%;
+    width: 10vw;
+    height: 10vw;
+
+    animation-delay: 2.25s;
+  }
+
+  .icon-html {
+    top: 10%;
+    left: 90%;
+    width: 5vw;
+    height: 5vw;
+
+    animation-delay: 3.25s;
+  }
+
+  .icon-css {
+    top: 30%;
+    left: 75%;
+    width: 5vw;
+    height: 5vw;
+
+    animation-delay: 1.5s;
+  }
+
+  .icon-sass {
+    top: 10%;
+    left: 90%;
+    width: 5vw;
+    height: 5vw;
+
+    animation-delay: 2.5s;
+  }
+
+  .icon-javascript {
+    top: 30%;
+    left: 75%;
+    width: 5vw;
+    height: 5vw;
+
+    animation-delay: 3.5s;
+  }
+
+  .icon-typescript {
+    top: 30%;
+    left: 75%;
+    width: 5vw;
+    height: 5vw;
+
+    animation-delay: 1.75s;
+  }
+
+  .icon-react {
+    top: 10%;
+    left: -5%;
+    width: 20vw;
+    height: 20vw;
+
+    animation-delay: 2.75s;
+  }
+
+  .icon-redux {
+    top: 10%;
+    left: 90%;
+    width: 15vw;
+    height: 15vw;
+
+    animation-delay: 3.75s;
   }
 }
