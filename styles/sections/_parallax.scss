@@ -13,111 +13,162 @@
     animation: opacityChange 1s ease-in-out forwards;
   }
 
-  .icon-node {
-    top: 30%;
-    left: 75%;
-    width: 15vw;
-    height: 15vw;
-
-    animation-delay: 1s;
+  // data-speed = 0.65
+  .icon-big {
+    width: 20vw;
+    height: 20vw;
   }
 
-  .icon-graphql {
-    top: 65%;
-    left: 55%;
+  // data-speed = 0.45
+  .icon-med {
     width: 15vw;
     height: 15vw;
+  }
+
+  // data-speed = 0.25
+  .icon-small {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  // data-speed = 0.15
+  .icon-tiny {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  @include bp-tablet {
+    .icon-big {
+      width: 25vw;
+      height: 25vw;
+    }
+
+    .icon-med {
+      width: 20vw;
+      height: 20vw;
+    }
+
+    .icon-small {
+      width: 15vw;
+      height: 15vw;
+    }
+
+    .icon-tiny {
+      width: 10vw;
+      height: 10vw;
+    }
+  }
+
+  @include bp-mobile {
+    .icon-big {
+      width: 35vw;
+      height: 35vw;
+    }
+
+    .icon-med {
+      width: 30vw;
+      height: 30vw;
+    }
+
+    .icon-small {
+      width: 25vw;
+      height: 25vw;
+    }
+
+    .icon-tiny {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+
+  .icon-html {
+    top: 65%;
+    left: 25%;
 
     animation-delay: 2s;
   }
 
-  .icon-apollo {
-    top: 65%;
-    left: 55%;
-    width: 15vw;
-    height: 15vw;
-
-    animation-delay: 3s;
-  }
-
-  .icon-mongodb {
-    top: 10%;
-    left: -5%;
-    width: 10vw;
-    height: 10vw;
-
-    animation-delay: 1.25s;
-  }
-
-  .icon-firebase {
-    top: 65%;
-    left: 55%;
-    width: 10vw;
-    height: 10vw;
-
-    animation-delay: 2.25s;
-  }
-
-  .icon-html {
-    top: 10%;
-    left: 90%;
-    width: 5vw;
-    height: 5vw;
-
-    animation-delay: 3.25s;
-  }
-
   .icon-css {
-    top: 30%;
-    left: 75%;
-    width: 5vw;
-    height: 5vw;
-
-    animation-delay: 1.5s;
-  }
-
-  .icon-sass {
-    top: 10%;
+    top: 75%;
     left: 90%;
-    width: 5vw;
-    height: 5vw;
 
     animation-delay: 2.5s;
   }
 
-  .icon-javascript {
-    top: 30%;
+  .icon-sass {
+    top: 65%;
     left: 75%;
-    width: 5vw;
-    height: 5vw;
 
-    animation-delay: 3.5s;
+    animation-delay: 3s;
+  }
+
+  .icon-javascript {
+    top: 35%;
+    left: 85%;
+
+    animation-delay: 1s;
   }
 
   .icon-typescript {
-    top: 30%;
-    left: 75%;
-    width: 5vw;
-    height: 5vw;
+    top: 31%;
+    left: 89%;
 
-    animation-delay: 1.75s;
+    animation-delay: 2s;
   }
 
   .icon-react {
-    top: 10%;
-    left: -5%;
-    width: 20vw;
-    height: 20vw;
+    top: 15%;
+    left: -10%;
+
+    animation-delay: 1.5s;
+  }
+
+  .icon-redux {
+    top: 35%;
+    left: 25%;
+
+    animation-delay: 2.25s;
+  }
+
+  .icon-nodejs {
+    top: 5%;
+    left: 60%;
+
+    animation-delay: 1.25s;
+  }
+
+  .icon-deno {
+    top: -2%;
+    left: 20%;
+
+    animation-delay: 60s;
+  }
+
+  .icon-graphql {
+    top: 62%;
+    left: 5%;
 
     animation-delay: 2.75s;
   }
 
-  .icon-redux {
-    top: 10%;
-    left: 90%;
-    width: 15vw;
-    height: 15vw;
+  .icon-apollo {
+    top: 75%;
+    left: 5%;
 
-    animation-delay: 3.75s;
+    animation-delay: 3.25s;
+  }
+
+  .icon-firebase {
+    top: 70%;
+    left: 35%;
+
+    animation-delay: 1.25s;
+  }
+
+  .icon-mongodb {
+    top: 80%;
+    left: 70%;
+
+    animation-delay: 1.75s;
   }
 }

@@ -7,28 +7,18 @@
     width: max-content;
 
     &:hover {
-      @include menu-btn();
+      .nav__menu {
+        @include menu-btn-hover();
+      }
+
+      .nav__items {
+        @include nav-items-hover();
+      }
     }
   }
 
   &__menu {
-    position: relative;
-    z-index: 1;
-
-    background-color: $black;
-
-    width: max-content;
-    margin: 20px 0;
-    padding: 0.25em 0.5em;
-
-    border: 2px solid $white;
-    border-radius: 0.25em;
-
-    transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s;
-
-    & > h2 {
-      transition: color ease-in-out 0.25s;
-    }
+    @include menu-btn();
   }
 
   &__items {
@@ -84,6 +74,12 @@
 
 .menu-active {
   @include bp-tablet {
-    @include menu-btn();
+    .nav__menu {
+      @include menu-btn-hover();
+    }
+
+    .nav__items {
+      @include nav-items-hover();
+    }
   }
 }

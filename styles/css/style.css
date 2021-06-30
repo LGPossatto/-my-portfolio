@@ -170,8 +170,8 @@ li {
   display: grid;
 }
 
-.grid-g-5 {
-  gap: 5rem;
+.grid-g-1 {
+  gap: 1rem;
 }
 
 .grid-gtc-3 {
@@ -286,112 +286,153 @@ li {
           animation: opacityChange 1s ease-in-out forwards;
 }
 
-.parallax .icon-node {
-  top: 30%;
-  left: 75%;
-  width: 15vw;
-  height: 15vw;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+.parallax .icon-big {
+  width: 20vw;
+  height: 20vw;
 }
 
-.parallax .icon-graphql {
-  top: 65%;
-  left: 55%;
+.parallax .icon-med {
   width: 15vw;
   height: 15vw;
+}
+
+.parallax .icon-small {
+  width: 10vw;
+  height: 10vw;
+}
+
+.parallax .icon-tiny {
+  width: 5vw;
+  height: 5vw;
+}
+
+@media (max-width: 768px) {
+  .parallax .icon-big {
+    width: 25vw;
+    height: 25vw;
+  }
+  .parallax .icon-med {
+    width: 20vw;
+    height: 20vw;
+  }
+  .parallax .icon-small {
+    width: 15vw;
+    height: 15vw;
+  }
+  .parallax .icon-tiny {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax .icon-big {
+    width: 35vw;
+    height: 35vw;
+  }
+  .parallax .icon-med {
+    width: 30vw;
+    height: 30vw;
+  }
+  .parallax .icon-small {
+    width: 25vw;
+    height: 25vw;
+  }
+  .parallax .icon-tiny {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+.parallax .icon-html {
+  top: 65%;
+  left: 25%;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-.parallax .icon-apollo {
-  top: 65%;
-  left: 55%;
-  width: 15vw;
-  height: 15vw;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.parallax .icon-mongodb {
-  top: 10%;
-  left: -5%;
-  width: 10vw;
-  height: 10vw;
-  -webkit-animation-delay: 1.25s;
-          animation-delay: 1.25s;
-}
-
-.parallax .icon-firebase {
-  top: 65%;
-  left: 55%;
-  width: 10vw;
-  height: 10vw;
-  -webkit-animation-delay: 2.25s;
-          animation-delay: 2.25s;
-}
-
-.parallax .icon-html {
-  top: 10%;
-  left: 90%;
-  width: 5vw;
-  height: 5vw;
-  -webkit-animation-delay: 3.25s;
-          animation-delay: 3.25s;
-}
-
 .parallax .icon-css {
-  top: 30%;
-  left: 75%;
-  width: 5vw;
-  height: 5vw;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-.parallax .icon-sass {
-  top: 10%;
+  top: 75%;
   left: 90%;
-  width: 5vw;
-  height: 5vw;
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
 }
 
-.parallax .icon-javascript {
-  top: 30%;
+.parallax .icon-sass {
+  top: 65%;
   left: 75%;
-  width: 5vw;
-  height: 5vw;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.parallax .icon-javascript {
+  top: 35%;
+  left: 85%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .parallax .icon-typescript {
-  top: 30%;
-  left: 75%;
-  width: 5vw;
-  height: 5vw;
-  -webkit-animation-delay: 1.75s;
-          animation-delay: 1.75s;
+  top: 31%;
+  left: 89%;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .parallax .icon-react {
-  top: 10%;
-  left: -5%;
-  width: 20vw;
-  height: 20vw;
+  top: 15%;
+  left: -10%;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.parallax .icon-redux {
+  top: 35%;
+  left: 25%;
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+.parallax .icon-nodejs {
+  top: 5%;
+  left: 60%;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.parallax .icon-deno {
+  top: -2%;
+  left: 20%;
+  -webkit-animation-delay: 60s;
+          animation-delay: 60s;
+}
+
+.parallax .icon-graphql {
+  top: 62%;
+  left: 5%;
   -webkit-animation-delay: 2.75s;
           animation-delay: 2.75s;
 }
 
-.parallax .icon-redux {
-  top: 10%;
-  left: 90%;
-  width: 15vw;
-  height: 15vw;
-  -webkit-animation-delay: 3.75s;
-          animation-delay: 3.75s;
+.parallax .icon-apollo {
+  top: 75%;
+  left: 5%;
+  -webkit-animation-delay: 3.25s;
+          animation-delay: 3.25s;
+}
+
+.parallax .icon-firebase {
+  top: 70%;
+  left: 35%;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.parallax .icon-mongodb {
+  top: 80%;
+  left: 70%;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
 }
 
 .nav {
@@ -639,7 +680,87 @@ li {
 
 .projects__title {
   text-align: center;
-  padding: 100px 0 50px;
+  padding-top: 100px;
+}
+
+.projects__filter {
+  position: relative;
+}
+
+.projects__filter:hover {
+  width: 350px;
+}
+
+.projects__filter:hover .filter-btn {
+  background-color: #fafafa;
+  -webkit-box-shadow: 0 0 7px white;
+          box-shadow: 0 0 7px white;
+}
+
+.projects__filter:hover .filter-btn > h2 {
+  color: #141414;
+}
+
+.projects__filter:hover .filter-items {
+  height: 300px;
+  width: 350px;
+  -webkit-transition: height 1s ease-in-out, width 0.25s ease-in-out;
+  transition: height 1s ease-in-out, width 0.25s ease-in-out;
+}
+
+.projects__filter .filter-btn {
+  position: relative;
+  z-index: 1;
+  background-color: #141414;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px 0;
+  padding: 0.25em 0.5em;
+  border: 2px solid #fafafa;
+  border-radius: 0.25em;
+  -webkit-transition: background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  transition: background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s;
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.projects__filter .filter-btn > h2 {
+  -webkit-transition: color ease-in-out 0.25s;
+  transition: color ease-in-out 0.25s;
+}
+
+.projects__filter .filter-items {
+  overflow: hidden;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  background-color: #141414;
+  width: 0;
+  height: 0;
+  border-top: 2px solid #fafafa;
+  border-bottom: 2px solid #fafafa;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: height 1s ease-in-out, width 1s step-end;
+  transition: height 1s ease-in-out, width 1s step-end;
+}
+
+.projects__filter .filter-items .item {
+  cursor: pointer;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: auto;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 0.25em;
+  text-align: center;
 }
 
 .projects__cards {
@@ -766,6 +887,23 @@ li {
 .projects__cards .card-active .card__content {
   -webkit-transform: rotateY(0.5turn);
           transform: rotateY(0.5turn);
+}
+
+@media (max-width: 768px) {
+  .filter-active .filter-btn {
+    background-color: #fafafa;
+    -webkit-box-shadow: 0 0 7px white;
+            box-shadow: 0 0 7px white;
+  }
+  .filter-active .filter-btn > h2 {
+    color: #141414;
+  }
+  .filter-active .filter-items {
+    height: 300px;
+    width: 350px;
+    -webkit-transition: height 1s ease-in-out, width 0.25s ease-in-out;
+    transition: height 1s ease-in-out, width 0.25s ease-in-out;
+  }
 }
 
 .profile {

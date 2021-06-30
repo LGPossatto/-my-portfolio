@@ -14,31 +14,86 @@
     ></script>
     <title>Luiz Gustavo</title>
   </head>
+
   <body>
     <section class="parallax" id="parallax">
       <img
-        class="parallax__icon icon-react"
-        data-speed="0.5"
+        class="parallax__icon icon-tiny icon-html"
+        data-speed="0.15"
+        src="./icons/html.svg"
+        alt="html icon"
+      />
+      <img
+        class="parallax__icon icon-tiny icon-css"
+        data-speed="0.15"
+        src="./icons/css.svg"
+        alt="css icon"
+      />
+      <img
+        class="parallax__icon icon-tiny icon-sass"
+        data-speed="0.15"
+        src="./icons/sass.svg"
+        alt="sass icon"
+      />
+      <img
+        class="parallax__icon icon-tiny icon-javascript"
+        data-speed="0.15"
+        src="./icons/javascript.svg"
+        alt="javascript icon"
+      />
+      <img
+        class="parallax__icon icon-tiny icon-typescript"
+        data-speed="0.15"
+        src="./icons/typescript.svg"
+        alt="typescript icon"
+      />
+      <img
+        class="parallax__icon icon-big icon-react"
+        data-speed="0.65"
         src="./icons/react.svg"
         alt="react icon"
       />
       <img
-        class="parallax__icon icon-node"
-        data-speed="0.75"
-        src="./icons/nodejs.svg"
-        alt="nodejs icon"
-      />
-      <img
-        class="parallax__icon icon-redux"
-        data-speed="1.25"
+        class="parallax__icon icon-small icon-redux"
+        data-speed="0.25"
         src="./icons/redux.svg"
         alt="redux icon"
       />
       <img
-        class="parallax__icon icon-graphql"
+        class="parallax__icon icon-med icon-nodejs"
+        data-speed="0.45"
+        src="./icons/nodejs.svg"
+        alt="nodejs icon"
+      />
+      <img
+        class="parallax__icon icon-small icon-deno"
         data-speed="0.25"
+        src="./icons/deno.svg"
+        alt="deno icon"
+      />
+      <img
+        class="parallax__icon icon-med icon-graphql"
+        data-speed="0.45"
         src="./icons/graphql.svg"
         alt="graphql icon"
+      />
+      <img
+        class="parallax__icon icon-tiny icon-apollo"
+        data-speed="0.15"
+        src="./icons/apollo.svg"
+        alt="apollo icon"
+      />
+      <img
+        class="parallax__icon icon-tiny icon-firebase"
+        data-speed="0.15"
+        src="./icons/firebase.svg"
+        alt="firebase icon"
+      />
+      <img
+        class="parallax__icon icon-tiny icon-mongodb"
+        data-speed="0.15"
+        src="./icons/mongodb.svg"
+        alt="mongodb icon"
       />
     </section>
 
@@ -98,6 +153,22 @@
     <section class="projects">
       <span class="projects__line"></span>
       <h2 class="projects__title fs-biggest fc-light">Projetos</h2>
+      <div class="projects__btns flex jc-c">
+        <div class="projects__filter" id="projects-filter">
+          <div class="filter-btn fs-med">
+            <h2 class="fs-med fc-light">Filtrar</h2>
+          </div>
+          <div class="filter-items grid grid-gtc-3">
+            <div class="item fs-med fc-light">Test 1</div>
+            <div class="item fs-med fc-light">Test 2</div>
+            <div class="item fs-med fc-light">Test 3</div>
+            <div class="item fs-med fc-light">Test 4</div>
+            <div class="item fs-med fc-light">Test 5</div>
+            <div class="item fs-med fc-light">Test 6</div>
+          </div>
+        </div>
+        <div class="projects__more"></div>
+      </div>
       <div
         class="projects__cards container flex flex-fw-w jc-c"
         id="projects-cards"

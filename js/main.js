@@ -1,9 +1,15 @@
 // ------------------------- menu button ------------------------- //
 const navHelper = document.getElementById("nav-helper");
-
 navHelper.addEventListener("click", () => {
   if (window.innerWidth <= 768) {
     navHelper.classList.toggle("menu-active");
+  }
+});
+
+const projectsFilter = document.getElementById("projects-filter");
+projectsFilter.addEventListener("click", () => {
+  if (window.innerWidth <= 768) {
+    projectsFilter.classList.toggle("filter-active");
   }
 });
 

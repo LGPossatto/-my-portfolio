@@ -43,35 +43,53 @@
 //-----------------------------------------------------------------//
 
 @mixin menu-btn {
-  .nav__menu {
-    background-color: $white;
-    box-shadow: 0 0 7px white;
+  position: relative;
+  z-index: 1;
 
-    & > h2 {
-      color: $black;
-    }
+  background-color: $black;
+
+  width: max-content;
+  margin: 20px 0;
+  padding: 0.25em 0.5em;
+
+  border: 2px solid $white;
+  border-radius: 0.25em;
+
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s;
+
+  & > h2 {
+    transition: color ease-in-out 0.25s;
+  }
+}
+
+@mixin menu-btn-hover {
+  background-color: $white;
+  box-shadow: 0 0 7px white;
+
+  & > h2 {
+    color: $black;
+  }
+}
+
+@mixin nav-items-hover {
+  height: 250px;
+
+  & > :first-child,
+  & > :nth-child(2),
+  & > :last-child {
+    opacity: 1;
   }
 
-  .nav__items {
-    height: 250px;
+  & > :first-child {
+    transform: translateY(225%);
+  }
 
-    & > :first-child,
-    & > :nth-child(2),
-    & > :last-child {
-      opacity: 1;
-    }
+  & > :nth-child(2) {
+    transform: translateY(250%);
+  }
 
-    & > :first-child {
-      transform: translateY(225%);
-    }
-
-    & > :nth-child(2) {
-      transform: translateY(250%);
-    }
-
-    & > :last-child {
-      transform: translateY(275%);
-    }
+  & > :last-child {
+    transform: translateY(275%);
   }
 }
 
