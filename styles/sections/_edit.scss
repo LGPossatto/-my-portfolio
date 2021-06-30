@@ -1,0 +1,35 @@
+.edit {
+  padding: 50px;
+
+  & > span {
+    display: block;
+
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__form {
+    margin: 50px 0;
+
+    input {
+      background-color: $black;
+
+      max-width: 500px;
+      margin-bottom: 25px;
+
+      outline: none;
+      border: none;
+      border-bottom: 2px solid white;
+    }
+
+    input.radio {
+      margin: 0 25px 0 5px;
+    }
+  }
+}

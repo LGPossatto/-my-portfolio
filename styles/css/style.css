@@ -979,6 +979,40 @@ li {
   color: #00ffbf;
 }
 
+.edit {
+  padding: 50px;
+}
+
+.edit > span {
+  display: block;
+}
+
+.edit > span a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.edit > span a:hover {
+  color: #00c3ff;
+}
+
+.edit__form {
+  margin: 50px 0;
+}
+
+.edit__form input {
+  background-color: #141414;
+  max-width: 500px;
+  margin-bottom: 25px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+.edit__form input.radio {
+  margin: 0 25px 0 5px;
+}
+
 .error {
   width: 100vw;
   height: 100vh;

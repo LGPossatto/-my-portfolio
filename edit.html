@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a70c2be55e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Luiz Gustavo</title>
+  </head>
+
+  <body>
+    <section class="edit">
+      <h1 class="fs-big fc-light">Edit/Create new projects</h1>
+      <span class="fs-med fc-light"
+        >*This page is for editing and creating new projects, if you don't want
+        to do any of the two, go back do the main page
+        <a href="/" class="fs-med fc-light">here</a></span
+      >
+      <form action="" class="edit__form flex flex-fd-c">
+        <label class="fs-med fc-light" for="projectName">Project Name</label>
+        <input
+          type="text"
+          id="projectName"
+          name="projectName"
+          class="fs-med fc-light"
+        />
+
+        <label class="fs-med fc-light" for="projectDescription"
+          >Project Description</label
+        >
+        <input
+          type="text"
+          id="projectDescription"
+          name="projectDescription"
+          class="fs-med fc-light"
+        />
+
+        <label class="fs-med fc-light" for="githubUrl">GitHub Url</label>
+        <input
+          type="text"
+          id="githubUrl"
+          name="githubUrl"
+          class="fs-med fc-light"
+        />
+
+        <label class="fs-med fc-light" for="siteUrl">Site Url</label>
+        <input
+          type="text"
+          id="siteUrl"
+          name="siteUrl"
+          class="fs-med fc-light"
+        />
+
+        <div class="stack">
+          <label class="fs-med fc-light" for="fullstack">Fullstack</label>
+          <input
+            type="radio"
+            id="fullstack"
+            name="stack"
+            class="radio fs-med fc-light"
+          />
+          <label class="fs-med fc-light" for="frontend">Frontend</label>
+          <input
+            type="radio"
+            id="frontend"
+            name="stack"
+            class="radio fs-med fc-light"
+          />
+          <label class="fs-med fc-light" for="backend">Backend</label>
+          <input
+            type="radio"
+            id="backend"
+            name="stack"
+            class="radio fs-med fc-light"
+          />
+        </div>
+      </form>
+    </section>
+
+    <script src="/js/edit.js"></script>
+  </body>
+</html>
