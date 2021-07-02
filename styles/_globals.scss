@@ -22,9 +22,27 @@ html {
   font-size: 62.5%;
 }
 
+.body-colors {
+  --color-black: #{$black};
+  --color-white: #{$white};
+
+  --color-blue: #{$color-blue};
+  --color-red: #{$color-red};
+  --color-green: #{$color-green};
+}
+
+.body-colors-invert {
+  --color-black: #{$white};
+  --color-white: #{$black};
+
+  --color-blue: #{$color-blue};
+  --color-red: #{$color-red};
+  --color-green: #{$color-green};
+}
+
 body {
   position: relative;
-  background-color: $black;
+  background-color: var(--color-black);
 }
 
 a {

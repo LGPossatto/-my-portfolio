@@ -81,9 +81,25 @@ html {
   font-size: 62.5%;
 }
 
+.body-colors {
+  --color-black: #141414;
+  --color-white: #fafafa;
+  --color-blue: #00c3ff;
+  --color-red: #ff4800;
+  --color-green: #00ffbf;
+}
+
+.body-colors-invert {
+  --color-black: #fafafa;
+  --color-white: #141414;
+  --color-blue: #00c3ff;
+  --color-red: #ff4800;
+  --color-green: #00ffbf;
+}
+
 body {
   position: relative;
-  background-color: #141414;
+  background-color: var(--color-black);
 }
 
 a {
@@ -672,7 +688,7 @@ li {
   bottom: 0;
   background-color: #141414;
   width: 100%;
-  border-top: 5px solid #fafafa;
+  border-top: 5px solid var(--color-white);
   border-bottom: 5px solid #fafafa;
   -webkit-transform: skewY(-5deg);
           transform: skewY(-5deg);
@@ -811,7 +827,8 @@ li {
 }
 
 .projects__cards .card__front {
-  background-color: rebeccapurple;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00c3ff), to(#00ffbf));
+  background-image: linear-gradient(to bottom right, #00c3ff, #00ffbf);
 }
 
 .projects__cards .card__front h3 {
@@ -831,7 +848,8 @@ li {
 }
 
 .projects__cards .card__back {
-  background-color: royalblue;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#00ffbf), to(#00c3ff));
+  background-image: linear-gradient(to top right, #00ffbf, #00c3ff);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }

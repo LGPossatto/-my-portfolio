@@ -1,4 +1,8 @@
-// ------------------------- menu button ------------------------- //
+import { data } from "./data.js";
+
+// -------------------------------------------------------------- //
+// ---------------------- toggle btn class ---------------------- //
+// -------------------------------------------------------------- //
 const navHelper = document.getElementById("nav-helper");
 navHelper.addEventListener("click", () => {
   if (window.innerWidth <= 768) {
@@ -13,7 +17,22 @@ projectsFilter.addEventListener("click", () => {
   }
 });
 
+// -------------------------------------------------------------- //
+// ----------------------- parallax effect ---------------------- //
+// -------------------------------------------------------------- //
+document.addEventListener("scroll", () => {
+  const parallaxElements = document.getElementById("parallax").children;
+
+  for (let i = 0; i < parallaxElements.length; i++) {
+    let pos = window.pageYOffset * parallaxElements[i].dataset.speed;
+
+    parallaxElements[i].style.transform = `translate3d(0px, ${pos}px, 0px)`;
+  }
+});
+
+// -------------------------------------------------------------- //
 // ------------------------- typewriter ------------------------- //
+// -------------------------------------------------------------- //
 document.addEventListener("DOMContentLoaded", () => {
   const headerTitle = document.getElementById("title-helper").children;
 
@@ -85,24 +104,92 @@ document.addEventListener("DOMContentLoaded", () => {
   // writeFunction();
 });
 
-// ----------------------- projects cards ----------------------- //
-const projectsCards = document.getElementById("projects-cards").children;
+// -------------------------------------------------------------- //
+// ---------------------- crt/add projects ---------------------- //
+// -------------------------------------------------------------- //
+document.addEventListener("DOMContentLoaded", async () => {
+  const createCard = (project, cardsElement) => {
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
 
-for (let i = 0; i < projectsCards.length; i++) {
-  projectsCards[i].addEventListener("click", (el) => {
-    if (el.target.nodeName !== "A" && el.target.nodeName !== "I") {
-      projectsCards[i].classList.toggle("card-active");
-    }
-  });
-}
+    /* cardDiv child */
+    const cardContentDiv = document.createElement("div");
+    cardContentDiv.classList.add("card__content");
+    /* cardDiv child */
 
-// -------------------------- parallax --------------------------- //
-document.addEventListener("scroll", () => {
-  const parallaxElements = document.getElementById("parallax").children;
+    /* cardContentDiv child */
+    const cardFrontDiv = document.createElement("div");
+    cardFrontDiv.classList.add("card__front");
 
-  for (let i = 0; i < parallaxElements.length; i++) {
-    let pos = window.pageYOffset * parallaxElements[i].dataset.speed;
+    /* cardFrontDiv child */
+    const cardTitleh3 = document.createElement("h3");
+    cardTitleh3.classList.add("fs-big", "fc-light");
+    cardTitleh3.innerText = project.name;
 
-    parallaxElements[i].style.transform = `translate3d(0px, ${pos}px, 0px)`;
+    const cardFrontHelperDiv = document.createElement("div");
+    cardFrontHelperDiv.classList.add("front-card-helper", "flex", "ai-c");
+    /* parrent ^ */
+    const cardDescP = document.createElement("p");
+    cardDescP.classList.add("fs-med", "fc-light");
+    cardDescP.innerText = project.desc;
+    /* cardFrontDiv child */
+
+    const cardBackDiv = document.createElement("div");
+    cardBackDiv.classList.add("card__back", "flex", "jc-se", "ai-c");
+    /* cardBackDiv child */
+    const cardGitA = document.createElement("a");
+    cardGitA.classList.add("card__btn");
+    cardGitA.href = project.git_url;
+    cardGitA.target = "_blank";
+    // parent ^
+    const cardGitI = document.createElement("i");
+    cardGitI.classList.add("fab", "fa-github-alt", "fs-biggest");
+
+    const cardSiteA = document.createElement("a");
+    cardSiteA.classList.add("card__btn");
+    cardSiteA.href = project.site_url;
+    cardSiteA.target = "_blank";
+    // parent ^
+    const cardSiteI = document.createElement("i");
+    cardSiteI.classList.add("fas", "fa-eye", "fs-biggest");
+    /* cardBackDiv child */
+    /* cardContentDiv child */
+
+    // mount card
+    // cardBackDiv
+    cardGitA.appendChild(cardGitI);
+    cardSiteA.appendChild(cardSiteI);
+    cardBackDiv.appendChild(cardGitA);
+    cardBackDiv.appendChild(cardSiteA);
+
+    // cardFrontDiv
+    cardFrontHelperDiv.appendChild(cardDescP);
+    cardFrontDiv.appendChild(cardTitleh3);
+    cardFrontDiv.appendChild(cardFrontHelperDiv);
+
+    // cardContentDiv
+    cardContentDiv.appendChild(cardFrontDiv);
+    cardContentDiv.appendChild(cardBackDiv);
+
+    // cardDiv
+    cardDiv.appendChild(cardContentDiv);
+
+    // add animation
+    cardDiv.addEventListener("click", (el) => {
+      if (el.target.nodeName !== "A" && el.target.nodeName !== "I") {
+        cardDiv.classList.toggle("card-active");
+      }
+    });
+
+    // cardsElement
+    cardsElement.appendChild(cardDiv);
+  };
+
+  const projectsCards = document.getElementById("projects-cards");
+  //const projectsData = await fetch("http://localhost:5000/api/projects").json();
+  const projectsData = data.data;
+
+  for (let project of projectsData) {
+    createCard(project, projectsCards);
   }
 });

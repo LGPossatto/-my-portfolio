@@ -14,7 +14,7 @@
     background-color: $black;
     width: 100%;
 
-    border-top: 5px solid $white;
+    border-top: 5px solid var(--color-white);
     border-bottom: 5px solid $white;
     transform: skewY(-5deg);
   }
