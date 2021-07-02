@@ -24,20 +24,23 @@ html {
 
 .body-colors {
   --color-black: #{$black};
+  --color-grey: #{$grey};
+  --color-grey-light: #{$grey-light};
   --color-white: #{$white};
 
+  --color-purple: #{$color-purple};
   --color-blue: #{$color-blue};
-  --color-red: #{$color-red};
   --color-green: #{$color-green};
+  --color-green-light: #{$color-green-light};
+  --color-yellow: #{$color-yellow};
+  --color-red: #{$color-red};
+  --color-pink: #{$color-pink};
+  --color-pink-light: #{$color-pink-light};
 }
 
 .body-colors-invert {
   --color-black: #{$white};
   --color-white: #{$black};
-
-  --color-blue: #{$color-blue};
-  --color-red: #{$color-red};
-  --color-green: #{$color-green};
 }
 
 body {

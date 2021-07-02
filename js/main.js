@@ -108,6 +108,26 @@ document.addEventListener("DOMContentLoaded", () => {
 // ---------------------- crt/add projects ---------------------- //
 // -------------------------------------------------------------- //
 document.addEventListener("DOMContentLoaded", async () => {
+  const getTechColor = (tech) => {
+    const techColors = window.getComputedStyle(document.body);
+
+    const getColor = (propertyValue) => {
+      return techColors.getPropertyValue(`${propertyValue}`);
+    };
+
+    if (["hmtl", "javascript", "firebase"].includes(tech)) {
+      return `${getColor("--color-yellow")}, ${getColor("--color-red")}`;
+    } else if (["css", "react", "redux", "typescript"].includes(tech)) {
+      return `${getColor("--color-blue")}, ${getColor("--color-purple")}`;
+    } else if (["nodejs", "mongodb"].includes(tech)) {
+      return `${getColor("--color-green-light")}, ${getColor("--color-green")}`;
+    } else if (["sass", "graphql"].includes(tech)) {
+      return `${getColor("--color-pink-light")}, ${getColor("--color-pink")}`;
+    } else {
+      return `${getColor("--color-grey-light")}, ${getColor("--color-grey")}`;
+    }
+  };
+
   const createCard = (project, cardsElement) => {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
@@ -120,6 +140,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     /* cardContentDiv child */
     const cardFrontDiv = document.createElement("div");
     cardFrontDiv.classList.add("card__front");
+    cardFrontDiv.style.backgroundImage = `linear-gradient(to bottom right, ${getTechColor(
+      project.tech.primary_tech
+    )})`;
 
     /* cardFrontDiv child */
     const cardTitleh3 = document.createElement("h3");
@@ -136,6 +159,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const cardBackDiv = document.createElement("div");
     cardBackDiv.classList.add("card__back", "flex", "jc-se", "ai-c");
+    cardBackDiv.style.backgroundImage = `linear-gradient(to bottom left, ${getTechColor(
+      project.tech.primary_tech
+    )})`;
+
     /* cardBackDiv child */
     const cardGitA = document.createElement("a");
     cardGitA.classList.add("card__btn");

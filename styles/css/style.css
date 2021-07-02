@@ -83,18 +83,22 @@ html {
 
 .body-colors {
   --color-black: #141414;
+  --color-grey: #495057;
+  --color-grey-light: #ced4da;
   --color-white: #fafafa;
+  --color-purple: #8400ff;
   --color-blue: #00c3ff;
+  --color-green: #005741;
+  --color-green-light: #00ebb0;
+  --color-yellow: #fbff00;
   --color-red: #ff4800;
-  --color-green: #00ffbf;
+  --color-pink: #e100ff;
+  --color-pink-light: #ef7aff;
 }
 
 .body-colors-invert {
   --color-black: #fafafa;
   --color-white: #141414;
-  --color-blue: #00c3ff;
-  --color-red: #ff4800;
-  --color-green: #00ffbf;
 }
 
 body {
@@ -574,7 +578,7 @@ li {
 }
 
 .nav__items > :last-child:hover {
-  color: #00ffbf;
+  color: #00ebb0;
 }
 
 @media (max-width: 768px) {
@@ -826,11 +830,6 @@ li {
           transform-style: preserve-3d;
 }
 
-.projects__cards .card__front {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#00c3ff), to(#00ffbf));
-  background-image: linear-gradient(to bottom right, #00c3ff, #00ffbf);
-}
-
 .projects__cards .card__front h3 {
   -webkit-transform: translateZ(100px);
           transform: translateZ(100px);
@@ -848,8 +847,6 @@ li {
 }
 
 .projects__cards .card__back {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#00ffbf), to(#00c3ff));
-  background-image: linear-gradient(to top right, #00ffbf, #00c3ff);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
@@ -990,11 +987,11 @@ li {
 }
 
 .footer__info .link-helper-green:hover {
-  color: #00ffbf;
+  color: #00ebb0;
 }
 
 .footer__info .link-helper-green:hover i {
-  color: #00ffbf;
+  color: #00ebb0;
 }
 
 .edit {

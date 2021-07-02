@@ -138,11 +138,7 @@
     }
 
     &__front {
-      background-image: linear-gradient(
-        to bottom right,
-        $color-blue,
-        $color-green
-      );
+      // background-image: linear-gradient(to bottom right, $color-blue, $color-green);
 
       h3 {
         transform: translateZ(100px);
@@ -159,11 +155,7 @@
     }
 
     &__back {
-      background-image: linear-gradient(
-        to top right,
-        $color-green,
-        $color-blue
-      );
+      // background-image: linear-gradient(to top right, $color-green ,$color-blue);
       transform: rotateY(180deg);
     }
 
