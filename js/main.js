@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const createCard = (project, cardsElement) => {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
+    cardDiv.dataset.techList = project.tech.tech_list;
 
     /* cardDiv child */
     const cardContentDiv = document.createElement("div");
@@ -229,9 +230,48 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const projectsCards = document.getElementById("projects-cards");
   const filterItems = document.getElementById("filter-items");
+  const sadFace = document.getElementById("sad-face");
   //const projectsData = await fetch("http://localhost:5000/api/projects").json();
   const projectsData = data.data;
   const techSet = new Set();
+  const filterList = [];
+
+  const filterFunc = (tech) => {
+    if (filterList.includes(tech)) {
+      const techIndex = filterList.indexOf(tech);
+      if (techIndex > -1) {
+        filterList.splice(techIndex, 1);
+      }
+    } else {
+      filterList.push(tech);
+    }
+
+    for (let card of projectsCards.children) {
+      if (filterList.length <= 0) {
+        card.style.display = "block";
+      } else {
+        const dataSetList = card.dataset.techList.split(",");
+        const contains = filterList.every((value) =>
+          dataSetList.includes(value)
+        );
+        if (!contains) {
+          card.style.display = "none";
+        } else {
+          card.style.display = "block";
+        }
+      }
+    }
+
+    if (
+      Array.from(projectsCards.children).some(
+        (child) => child.style.display !== "none"
+      )
+    ) {
+      sadFace.style.display = "none";
+    } else {
+      sadFace.style.display = "block";
+    }
+  };
 
   const createListItem = (tech) => {
     const itemDiv = document.createElement("div");
@@ -240,6 +280,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     itemDiv.style.backgroundImage = "none";
 
     itemDiv.addEventListener("click", () => {
+      filterFunc(tech);
       if (itemDiv.style.backgroundImage === "none") {
         itemDiv.style.backgroundImage = `linear-gradient(to left, ${getTechColor(
           tech

@@ -90,7 +90,7 @@ html {
   --color-blue: #4cc9f0;
   --color-green: #1b4332;
   --color-mint: #00ebb0;
-  --color-orange: #ff4800;
+  --color-orange: #ff6b31;
   --color-pink: #ff0a54;
 }
 
@@ -127,6 +127,10 @@ li {
   .container {
     margin: 0 5%;
   }
+}
+
+.display-none {
+  display: none;
 }
 
 @media (min-width: 769px) {
@@ -567,7 +571,7 @@ li {
 }
 
 .nav__items > :nth-child(2):hover {
-  color: #ff4800;
+  color: #ff0a54;
 }
 
 .nav__items > :last-child {
@@ -696,6 +700,15 @@ li {
           transform: skewY(-5deg);
 }
 
+.projects__sadface {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .projects__title {
   text-align: center;
   padding-top: 100px;
@@ -784,6 +797,7 @@ li {
 }
 
 .projects__cards {
+  min-height: 400px;
   padding-bottom: 100px;
 }
 
@@ -979,11 +993,11 @@ li {
 }
 
 .footer__info .link-helper-red:hover {
-  color: #ff4800;
+  color: #ff0a54;
 }
 
 .footer__info .link-helper-red:hover i {
-  color: #ff4800;
+  color: #ff0a54;
 }
 
 .footer__info .link-helper-green:hover {

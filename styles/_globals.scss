@@ -71,6 +71,10 @@ li {
   }
 }
 
+.display-none {
+  display: none;
+}
+
 .hide-on-desktop {
   @include bp-tablet-min {
     display: none !important;
