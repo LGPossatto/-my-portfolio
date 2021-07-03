@@ -110,21 +110,36 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", async () => {
   const getTechColor = (tech) => {
     const techColors = window.getComputedStyle(document.body);
+    const frontend = ["frontend", "html", "css", "sass", "react", "redux"];
+    const backend = [
+      "backend",
+      "nodejs",
+      "deno",
+      "express",
+      "mongodb",
+      "firebase",
+      "postgresql",
+    ];
+    const fullstack = [
+      "fullstack",
+      "javascript",
+      "typescript",
+      "graphql",
+      "apollo",
+    ];
 
     const getColor = (propertyValue) => {
       return techColors.getPropertyValue(`${propertyValue}`);
     };
 
-    if (["hmtl", "javascript", "firebase"].includes(tech)) {
-      return `${getColor("--color-yellow")}, ${getColor("--color-red")}`;
-    } else if (["css", "react", "redux", "typescript"].includes(tech)) {
+    if (frontend.includes(tech)) {
       return `${getColor("--color-blue")}, ${getColor("--color-purple")}`;
-    } else if (["nodejs", "mongodb"].includes(tech)) {
-      return `${getColor("--color-green-light")}, ${getColor("--color-green")}`;
-    } else if (["sass", "graphql"].includes(tech)) {
-      return `${getColor("--color-pink-light")}, ${getColor("--color-pink")}`;
+    } else if (backend.includes(tech)) {
+      return `${getColor("--color-mint")}, ${getColor("--color-green")}`;
+    } else if (fullstack.includes(tech)) {
+      return `${getColor("--color-orange")}, ${getColor("--color-pink")}`;
     } else {
-      return `${getColor("--color-grey-light")}, ${getColor("--color-grey")}`;
+      return `${getColor("--color-steel")}, ${getColor("--color-grey")}`;
     }
   };
 
@@ -141,7 +156,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cardFrontDiv = document.createElement("div");
     cardFrontDiv.classList.add("card__front");
     cardFrontDiv.style.backgroundImage = `linear-gradient(to bottom right, ${getTechColor(
-      project.tech.primary_tech
+      project.tech.stack
     )})`;
 
     /* cardFrontDiv child */
@@ -160,7 +175,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cardBackDiv = document.createElement("div");
     cardBackDiv.classList.add("card__back", "flex", "jc-se", "ai-c");
     cardBackDiv.style.backgroundImage = `linear-gradient(to bottom left, ${getTechColor(
-      project.tech.primary_tech
+      project.tech.stack
     )})`;
 
     /* cardBackDiv child */
@@ -213,10 +228,42 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const projectsCards = document.getElementById("projects-cards");
+  const filterItems = document.getElementById("filter-items");
   //const projectsData = await fetch("http://localhost:5000/api/projects").json();
   const projectsData = data.data;
+  const techSet = new Set();
+
+  const createListItem = (tech) => {
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("item", "fs-med", "fc-light");
+    itemDiv.innerText = tech;
+    itemDiv.style.backgroundImage = "none";
+
+    itemDiv.addEventListener("click", () => {
+      if (itemDiv.style.backgroundImage === "none") {
+        itemDiv.style.backgroundImage = `linear-gradient(to left, ${getTechColor(
+          tech
+        )})`;
+      } else {
+        itemDiv.style.backgroundImage = "none";
+      }
+    });
+
+    filterItems.appendChild(itemDiv);
+  };
+
+  const addTech = (techList) => {
+    for (let tech of techList) {
+      techSet.add(tech);
+    }
+  };
 
   for (let project of projectsData) {
+    addTech(project.tech.tech_list);
     createCard(project, projectsCards);
+  }
+
+  for (let tech of techSet) {
+    createListItem(tech);
   }
 });

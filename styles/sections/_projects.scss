@@ -79,6 +79,8 @@
         border-radius: 0.25em;
 
         text-align: center;
+
+        transition: backgroundColor 0.25s ease-in-out, color 0.25s ease-in-out;
       }
     }
   }

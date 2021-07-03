@@ -41,20 +41,20 @@
 
       &-red {
         &:hover {
-          color: $color-red;
+          color: $color-orange;
 
           i {
-            color: $color-red;
+            color: $color-orange;
           }
         }
       }
 
       &-green {
         &:hover {
-          color: $color-green-light;
+          color: $color-mint;
 
           i {
-            color: $color-green-light;
+            color: $color-mint;
           }
         }
       }

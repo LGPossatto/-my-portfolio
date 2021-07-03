@@ -84,16 +84,14 @@ html {
 .body-colors {
   --color-black: #141414;
   --color-grey: #495057;
-  --color-grey-light: #ced4da;
+  --color-steel: #ced4da;
   --color-white: #fafafa;
-  --color-purple: #8400ff;
-  --color-blue: #00c3ff;
-  --color-green: #005741;
-  --color-green-light: #00ebb0;
-  --color-yellow: #fbff00;
-  --color-red: #ff4800;
-  --color-pink: #e100ff;
-  --color-pink-light: #ef7aff;
+  --color-purple: #480ca8;
+  --color-blue: #4cc9f0;
+  --color-green: #1b4332;
+  --color-mint: #00ebb0;
+  --color-orange: #ff4800;
+  --color-pink: #ff0a54;
 }
 
 .body-colors-invert {
@@ -560,7 +558,7 @@ li {
 }
 
 .nav__items > :first-child:hover {
-  color: #00c3ff;
+  color: #4cc9f0;
 }
 
 .nav__items > :nth-child(2) {
@@ -781,6 +779,8 @@ li {
   border: 2px solid white;
   border-radius: 0.25em;
   text-align: center;
+  -webkit-transition: backgroundColor 0.25s ease-in-out, color 0.25s ease-in-out;
+  transition: backgroundColor 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 .projects__cards {
@@ -971,11 +971,11 @@ li {
 }
 
 .footer__info .link-helper-blue:hover {
-  color: #00c3ff;
+  color: #4cc9f0;
 }
 
 .footer__info .link-helper-blue:hover i {
-  color: #00c3ff;
+  color: #4cc9f0;
 }
 
 .footer__info .link-helper-red:hover {
@@ -1008,7 +1008,7 @@ li {
 }
 
 .edit > span a:hover {
-  color: #00c3ff;
+  color: #4cc9f0;
 }
 
 .edit__form {
