@@ -97,15 +97,15 @@
       />
     </section>
 
-    <nav class="nav container flex flex-fd-c">
+    <nav class="nav container flex flex-fd-c" id="home">
       <div class="nav__helper" id="nav-helper">
         <div class="nav__menu fs-med">
           <h2 class="fs-med fc-light">Menu</h2>
         </div>
         <div class="nav__items">
-          <h2 class="fs-med fc-light">Home</h2>
-          <h2 class="fs-med fc-light">Projets</h2>
-          <h2 class="fs-med fc-light">About</h2>
+          <a href="#home" class="fs-med fc-light">Home</a>
+          <a href="#projects" class="fs-med fc-light">Projets</a>
+          <a href="#profile" class="fs-med fc-light">About</a>
         </div>
       </div>
     </nav>
@@ -150,7 +150,7 @@
       </div>
     </header>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <span class="projects__line"></span>
       <span class="projects__sadface fs-big fc-light" id="sad-face"
         >No Project found :(</span
@@ -195,7 +195,7 @@
       </div>
     </section>
 
-    <section class="profile container">
+    <section class="profile container" id="profile">
       <h2 class="fs-biggest fc-light">Sobre Min</h2>
       <p class="fs-big fc-light">
         Olá, me chamo Luiz Gustavo, tenho 26 anos e sou formado em engenharia
@@ -210,31 +210,41 @@
     <footer class="footer">
       <div class="footer__wrapper container flex jc-se">
         <div class="footer__info">
-          <a href="#!" class="link-helper link-helper-blue">
-            <i class="fab fa-github-alt fs-bigger fc-light"></i>
+          <a
+            href="https://github.com/LGPossatto"
+            class="link-helper link-helper-blue"
+          >
+            <i class="fab fa-github-alt fs-biggest fc-light"></i>
           </a>
           <p class="fs-med fc-light">
             Visite o meu
-            <a href="#!" class="link-helper link-helper-blue fs-med fc-light"
+            <a
+              href="https://github.com/LGPossatto"
+              class="link-helper link-helper-blue fs-med fc-light"
               >GitHub</a
             >
             para mais projetos meus
           </p>
         </div>
         <div class="footer__info">
-          <a href="#!" class="link-helper link-helper-red">
-            <i class="fas fa-file-alt fs-bigger fc-light"></i>
+          <a
+            href="https://docs.google.com/document/d/1WtM29685RdqS0biA5UFWBZIkHNy6VsNVgz6DX8WUU_E/edit?usp=sharing"
+            class="link-helper link-helper-red"
+          >
+            <i class="fas fa-file-alt fs-biggest fc-light"></i>
           </a>
           <p class="fs-med fc-light">
             Veja mais informações sobre min no meu
-            <a href="#!" class="link-helper link-helper-red fs-med fc-light"
+            <a
+              href="https://docs.google.com/document/d/1WtM29685RdqS0biA5UFWBZIkHNy6VsNVgz6DX8WUU_E/edit?usp=sharing"
+              class="link-helper link-helper-red fs-med fc-light"
               >currículo</a
             >
           </p>
         </div>
         <div class="footer__info">
           <a href="#!" class="link-helper link-helper-green">
-            <i class="fas fa-envelope fs-bigger fc-light"></i>
+            <i class="fas fa-envelope fs-biggest fc-light"></i>
           </a>
           <p class="fs-med fc-light">
             Entre em contato através do meu email LGPossatto@gmail.com

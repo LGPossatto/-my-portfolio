@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: $main-font;
-  color: $black;
+  color: var(--color-black);
 
   &::before,
   &::after {
@@ -245,6 +245,6 @@ li {
 // FONT COLOR
 .fc {
   &-light {
-    color: $white;
+    color: var(--color-white);
   }
 }

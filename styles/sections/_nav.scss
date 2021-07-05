@@ -32,7 +32,8 @@
 
     text-align: right;
 
-    & > h2 {
+    & > a {
+      display: block;
       width: 100%;
       margin: 10px 0;
     }
@@ -50,7 +51,7 @@
       transform: translateY(75%);
 
       &:hover {
-        color: $color-blue;
+        color: var(--color-blue);
       }
     }
 
@@ -58,7 +59,7 @@
       transform: translateY(-70%);
 
       &:hover {
-        color: $color-pink;
+        color: var(--color-pink);
       }
     }
 
@@ -66,7 +67,7 @@
       transform: translateY(-200%);
 
       &:hover {
-        color: $color-mint;
+        color: var(--color-mint);
       }
     }
   }

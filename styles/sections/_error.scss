@@ -19,13 +19,13 @@
 
   a {
     display: block;
-    background-color: $black;
+    background-color: var(--color-black);
 
     width: max-content;
     margin: 20px auto;
     padding: 0.25em 0.5em;
 
-    border: 2px solid $white;
+    border: 2px solid var(--color-white);
     border-radius: 0.25em;
 
     font-weight: 700;
@@ -34,7 +34,7 @@
       color ease-in-out 0.25s;
 
     &:hover {
-      background-color: $white;
+      background-color: var(--color-white);
       box-shadow: 0 0 7px white;
       color: $black;
     }

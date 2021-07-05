@@ -9,7 +9,7 @@
       text-decoration: underline;
 
       &:hover {
-        color: $color-blue;
+        color: var(--color-blue);
       }
     }
   }
@@ -18,14 +18,14 @@
     margin: 50px 0;
 
     input {
-      background-color: $black;
+      background-color: var(--color-black);
 
       max-width: 500px;
       margin-bottom: 25px;
 
       outline: none;
       border: none;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid var(--color-white);
     }
 
     input.radio {
