@@ -113,10 +113,10 @@
     <header class="header container flex flex-fd-c ai-c jc-sb">
       <span></span>
       <div class="header__helper" id="title-helper">
-        <h1 class="header__title fs-biggest fc-light">Olá,</h1>
-        <h1 class="header__title fs-biggest fc-light">me chamo Luiz Gustavo</h1>
-        <h1 class="header__title fs-biggest fc-light">e sou um</h1>
-        <h1 class="header__title fs-biggest fc-light">desenvolvedor web</h1>
+        <h1 class="header__title fs-biggest fc-light"></h1>
+        <h1 class="header__title fs-biggest fc-light"></h1>
+        <h1 class="header__title fs-biggest fc-light"></h1>
+        <h1 class="header__title fs-biggest fc-light"></h1>
       </div>
       <div class="header__footer flex flex-fd-c ai-c">
         <p class="header__subtitle fs-med fc-light">
@@ -156,7 +156,7 @@
         >No Project found :(</span
       >
       <h2 class="projects__title fs-biggest fc-light">Projetos</h2>
-      <div class="projects__btns flex jc-c">
+      <div class="projects__btns flex flex-fd-c ai-c">
         <div class="projects__filter" id="projects-filter">
           <div class="filter-btn fs-med">
             <h2 class="fs-med fc-light">Filtrar</h2>
@@ -165,12 +165,12 @@
             <!-- <div class="item fs-med fc-light">Item 1</div> -->
           </div>
         </div>
+        <div class="projects__loading" id="loading"><span></span></div>
       </div>
       <div
         class="projects__cards container flex flex-fw-w jc-c"
         id="projects-cards"
       >
-        <div class="projects__loading" id="loading"><span></span></div>
         <!-- <div class="card">
           <div class="card__content">
             <div class="card__front">
@@ -243,9 +243,9 @@
           </p>
         </div>
         <div class="footer__info">
-          <a href="#!" class="link-helper link-helper-green">
+          <div class="link-helper link-helper-green">
             <i class="fas fa-envelope fs-biggest fc-light"></i>
-          </a>
+          </div>
           <p class="fs-med fc-light">
             Entre em contato através do meu email LGPossatto@gmail.com
           </p>
@@ -253,9 +253,9 @@
       </div>
     </footer>
 
-    <script src="./js/toggleBtn.js" type="module"></script>
-    <script src="./js/parallaxEffect.js" type="module"></script>
-    <script src="./js/typewriter.js" type="module"></script>
-    <script src="./js/projectsSection.js" type="module"></script>
+    <script src="./js/index/toggleBtn.js"></script>
+    <script src="./js/index/parallaxEffect.js"></script>
+    <script src="./js/index/typewriter.js"></script>
+    <script src="./js/index/projectsSection.js" type="module"></script>
   </body>
 </html>

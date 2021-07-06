@@ -746,12 +746,12 @@ li {
 
 .projects__loading > span {
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: -15px;
+  left: -15px;
   display: block;
   background-color: var(--color-black);
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .projects__title {
@@ -1088,7 +1088,7 @@ li {
 }
 
 .edit__form {
-  margin: 50px 0;
+  margin: 25px 0;
 }
 
 .edit__form input {
@@ -1102,6 +1102,85 @@ li {
 
 .edit__form input.radio {
   margin: 0 25px 0 5px;
+}
+
+.edit__form .stack {
+  margin-bottom: 25px;
+}
+
+.edit__switch .switch-btn {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-black);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px 0;
+  padding: 0.25em 0.5em;
+  border: 2px solid var(--color-white);
+  border-radius: 0.25em;
+  -webkit-transition: background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  transition: background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s;
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  cursor: pointer;
+  margin: 25px 25px 0 0;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+
+.edit__switch .switch-btn > h2 {
+  -webkit-transition: color ease-in-out 0.25s;
+  transition: color ease-in-out 0.25s;
+}
+
+.edit__switch .switch-btn-active {
+  background-color: var(--color-white);
+  -webkit-box-shadow: 0 0 7px white;
+          box-shadow: 0 0 7px white;
+  color: var(--color-black);
+}
+
+.edit__switch .switch-btn-active > h2 {
+  color: var(--color-black);
+}
+
+.edit__btn {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-black);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px 0;
+  padding: 0.25em 0.5em;
+  border: 2px solid var(--color-white);
+  border-radius: 0.25em;
+  -webkit-transition: background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  transition: background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s;
+  transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
+  cursor: pointer;
+}
+
+.edit__btn > h2 {
+  -webkit-transition: color ease-in-out 0.25s;
+  transition: color ease-in-out 0.25s;
+}
+
+.edit__btn:hover {
+  background-color: var(--color-white);
+  -webkit-box-shadow: 0 0 7px white;
+          box-shadow: 0 0 7px white;
+}
+
+.edit__btn:hover > h2 {
+  color: var(--color-black);
+}
+
+.edit__error {
+  display: block;
+  color: var(--color-pink);
 }
 
 .error {

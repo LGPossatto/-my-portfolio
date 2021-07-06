@@ -15,61 +15,83 @@
     <title>Luiz Gustavo</title>
   </head>
 
-  <body>
+  <body class="body-colors">
     <section class="edit">
-      <h1 class="fs-big fc-light">Edit/Create new projects</h1>
+      <h1 class="fs-big fc-light">Create/Edit new projects</h1>
       <span class="fs-med fc-light"
         >*This page is for editing and creating new projects, if you don't want
         to do any of the two, go back do the main page
         <a href="/" class="fs-med fc-light">here</a></span
       >
-      <form action="" class="edit__form flex flex-fd-c">
-        <label class="fs-med fc-light" for="projectName">Project Name</label>
+      <div class="edit__switch">
+        <button
+          class="switch-btn switch-btn-active fs-med fc-light"
+          id="btn-create"
+        >
+          Create
+        </button>
+        <button class="switch-btn fs-med fc-light" id="btn-edit">Edit</button>
+      </div>
+      <form class="edit__form flex flex-fd-c" id="edit-form">
+        <label class="fs-med fc-light" for="project-name">Project Name</label>
         <input
           type="text"
-          id="projectName"
-          name="projectName"
+          id="project-name"
+          name="project-name"
           class="fs-med fc-light"
         />
 
-        <label class="fs-med fc-light" for="projectDescription"
+        <label class="fs-med fc-light" for="project-description"
           >Project Description</label
         >
         <input
           type="text"
-          id="projectDescription"
-          name="projectDescription"
+          id="project-description"
+          name="project-description"
           class="fs-med fc-light"
         />
 
-        <label class="fs-med fc-light" for="githubUrl">GitHub Url</label>
+        <label class="fs-med fc-light" for="github-url">GitHub Url</label>
         <input
           type="text"
-          id="githubUrl"
-          name="githubUrl"
+          id="github-url"
+          name="github-url"
           class="fs-med fc-light"
         />
 
-        <label class="fs-med fc-light" for="siteUrl">Site Url</label>
+        <label class="fs-med fc-light" for="site-url">Site Url</label>
         <input
           type="text"
-          id="siteUrl"
-          name="siteUrl"
+          id="site-url"
+          name="site-url"
           class="fs-med fc-light"
         />
 
-        <div class="stack">
+        <label class="fs-med fc-light" for="tech-list"
+          >Technologies Set (separated by comma)</label
+        >
+        <input
+          type="text"
+          id="tech-list"
+          name="tech-list"
+          class="fs-med fc-light"
+        />
+
+        <div class="stack" id="radio-stack">
           <label class="fs-med fc-light" for="fullstack">Fullstack</label>
           <input
             type="radio"
             id="fullstack"
+            value="fullstack"
             name="stack"
             class="radio fs-med fc-light"
+            checked
           />
           <label class="fs-med fc-light" for="frontend">Frontend</label>
           <input
             type="radio"
             id="frontend"
+            value="frontend"
             name="stack"
             class="radio fs-med fc-light"
           />
@@ -77,13 +99,21 @@
           <input
             type="radio"
             id="backend"
+            value="backend"
             name="stack"
             class="radio fs-med fc-light"
           />
         </div>
+
+        <span class="edit__error fs-med" id="edit-error"></span>
+
+        <button class="edit__btn" type="submit" id="edit-btn">
+          <h2 class="fs-med fc-light">Submit Project</h2>
+        </button>
       </form>
     </section>
 
-    <script src="/js/edit.js"></script>
+    <script src="/js/edit/editForm.js"></script>
+    >
   </body>
 </html>

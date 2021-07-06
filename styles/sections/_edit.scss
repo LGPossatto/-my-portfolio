@@ -15,7 +15,7 @@
   }
 
   &__form {
-    margin: 50px 0;
+    margin: 25px 0;
 
     input {
       background-color: var(--color-black);
@@ -31,5 +31,39 @@
     input.radio {
       margin: 0 25px 0 5px;
     }
+
+    .stack {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__switch {
+    .switch-btn {
+      @include menu-btn();
+
+      cursor: pointer;
+      margin: 25px 25px 0 0;
+
+      transition: color 0.25s ease-in-out;
+    }
+
+    .switch-btn-active {
+      @include menu-btn-hover();
+      color: var(--color-black);
+    }
+  }
+
+  &__btn {
+    @include menu-btn();
+    cursor: pointer;
+
+    &:hover {
+      @include menu-btn-hover();
+    }
+  }
+
+  &__error {
+    display: block;
+    color: var(--color-pink);
   }
 }
