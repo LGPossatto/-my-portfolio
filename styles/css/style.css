@@ -495,8 +495,8 @@ li {
 
 .nav__helper:hover .nav__menu {
   background-color: var(--color-white);
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white;
+  -webkit-box-shadow: 0 0 7px var(--color-white);
+          box-shadow: 0 0 7px var(--color-white);
 }
 
 .nav__helper:hover .nav__menu > h2 {
@@ -609,8 +609,8 @@ li {
 @media (max-width: 768px) {
   .menu-active .nav__menu {
     background-color: var(--color-white);
-    -webkit-box-shadow: 0 0 7px white;
-            box-shadow: 0 0 7px white;
+    -webkit-box-shadow: 0 0 7px var(--color-white);
+            box-shadow: 0 0 7px var(--color-white);
   }
   .menu-active .nav__menu > h2 {
     color: var(--color-black);
@@ -769,8 +769,8 @@ li {
 
 .projects__filter:hover .filter-btn {
   background-color: var(--color-white);
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white;
+  -webkit-box-shadow: 0 0 7px var(--color-white);
+          box-shadow: 0 0 7px var(--color-white);
 }
 
 .projects__filter:hover .filter-btn > h2 {
@@ -982,8 +982,8 @@ li {
 @media (max-width: 768px) {
   .filter-active .filter-btn {
     background-color: var(--color-white);
-    -webkit-box-shadow: 0 0 7px white;
-            box-shadow: 0 0 7px white;
+    -webkit-box-shadow: 0 0 7px var(--color-white);
+            box-shadow: 0 0 7px var(--color-white);
   }
   .filter-active .filter-btn > h2 {
     color: var(--color-black);
@@ -1071,19 +1071,45 @@ li {
 }
 
 .edit {
+  position: relative;
   padding: 50px;
 }
 
-.edit > span {
+.edit__warning {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.75);
+}
+
+.edit__warning .warning-box {
+  background-color: var(--color-white);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 25px;
+  margin: auto;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.edit__att {
   display: block;
 }
 
-.edit > span a {
+.edit__att a {
   font-weight: 700;
   text-decoration: underline;
 }
 
-.edit > span a:hover {
+.edit__att a:hover {
   color: var(--color-blue);
 }
 
@@ -1101,6 +1127,9 @@ li {
 }
 
 .edit__form input.radio {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
   margin: 0 25px 0 5px;
 }
 
@@ -1124,9 +1153,9 @@ li {
   transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s;
   transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
   cursor: pointer;
-  margin: 25px 25px 0 0;
-  -webkit-transition: color 0.25s ease-in-out;
-  transition: color 0.25s ease-in-out;
+  margin: 25px 10px 0 0;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .edit__switch .switch-btn > h2 {
@@ -1136,8 +1165,8 @@ li {
 
 .edit__switch .switch-btn-active {
   background-color: var(--color-white);
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white;
+  -webkit-box-shadow: 0 0 7px var(--color-white);
+          box-shadow: 0 0 7px var(--color-white);
   color: var(--color-black);
 }
 
@@ -1145,7 +1174,25 @@ li {
   color: var(--color-black);
 }
 
-.edit__btn {
+.edit__projects-list {
+  display: none;
+  margin: 10px 0;
+}
+
+.edit__projects-list > li {
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid var(--color-white);
+  border-radius: 0.5rem;
+}
+
+.edit__projects-list .li-active {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.edit__btn, .edit__btn-delete, .edit .btn-warnint-delete, .edit .btn-warnint-cancel {
   position: relative;
   z-index: 1;
   background-color: var(--color-black);
@@ -1161,21 +1208,73 @@ li {
   transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s;
   transition: box-shadow ease-in-out 0.25s, background-color ease-in-out 0.25s, -webkit-box-shadow ease-in-out 0.25s;
   cursor: pointer;
+  margin-right: 25px;
+  -webkit-transition: none;
+  transition: none;
 }
 
-.edit__btn > h2 {
+.edit__btn > h2, .edit__btn-delete > h2, .edit .btn-warnint-delete > h2, .edit .btn-warnint-cancel > h2 {
   -webkit-transition: color ease-in-out 0.25s;
   transition: color ease-in-out 0.25s;
 }
 
-.edit__btn:hover {
-  background-color: var(--color-white);
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white;
+.edit__btn h2, .edit__btn-delete h2, .edit .btn-warnint-delete h2, .edit .btn-warnint-cancel h2 {
+  -webkit-transition: none;
+  transition: none;
 }
 
-.edit__btn:hover > h2 {
+.edit__btn:hover, .edit__btn-delete:hover, .edit .btn-warnint-delete:hover, .edit .btn-warnint-cancel:hover {
+  background-color: var(--color-white);
+  -webkit-box-shadow: 0 0 7px var(--color-white);
+          box-shadow: 0 0 7px var(--color-white);
+}
+
+.edit__btn:hover > h2, .edit__btn-delete:hover > h2, .edit .btn-warnint-delete:hover > h2, .edit .btn-warnint-cancel:hover > h2 {
   color: var(--color-black);
+}
+
+.edit__btn-delete, .edit .btn-warnint-delete {
+  border-color: var(--color-pink);
+}
+
+.edit__btn-delete > h2, .edit .btn-warnint-delete > h2 {
+  color: var(--color-pink);
+}
+
+.edit__btn-delete:hover, .edit .btn-warnint-delete:hover {
+  background-color: var(--color-pink);
+  -webkit-box-shadow: 0 0 7px var(--color-pink);
+          box-shadow: 0 0 7px var(--color-pink);
+}
+
+.edit__btn-delete:hover > h2, .edit .btn-warnint-delete:hover > h2 {
+  color: var(--color-white);
+}
+
+.edit .btn-warnint-delete, .edit .btn-warnint-cancel {
+  background-color: var(--color-white);
+}
+
+.edit .btn-warnint-cancel {
+  border-color: var(--color-mint);
+}
+
+.edit .btn-warnint-cancel > h2 {
+  color: var(--color-mint);
+}
+
+.edit .btn-warnint-cancel:hover {
+  background-color: var(--color-mint);
+  -webkit-box-shadow: 0 0 7px var(--color-mint);
+          box-shadow: 0 0 7px var(--color-mint);
+}
+
+.edit .btn-warnint-cancel:hover > h2 {
+  color: var(--color-white);
+}
+
+.edit__btn-delete {
+  display: none;
 }
 
 .edit__error {

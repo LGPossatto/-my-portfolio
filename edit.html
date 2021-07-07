@@ -17,8 +17,25 @@
 
   <body class="body-colors">
     <section class="edit">
+      <span class="edit__warning flex" id="edit-warning">
+        <div class="warning-box">
+          <h3 class="fs-med">Are you sure you want to delete this project?</h3>
+          <div class="flex jc-c">
+            <button class="btn-warnint-delete" type="button" id="btn-warnint-delete">
+              <h2 class="fs-med">
+                Delete
+              </h2>
+            </button>
+            <button class="btn-warnint-cancel" type="button" id="btn-warnint-cancel">
+              <h2 class="fs-med">
+                Cancel
+              </h2>
+            </button>
+          </div>
+        </div>
+      </span>
       <h1 class="fs-big fc-light">Create/Edit new projects</h1>
-      <span class="fs-med fc-light"
+      <span class="edit__att fs-med fc-light"
         >*This page is for editing and creating new projects, if you don't want
         to do any of the two, go back do the main page
         <a href="/" class="fs-med fc-light">here</a></span
@@ -32,6 +49,7 @@
         </button>
         <button class="switch-btn fs-med fc-light" id="btn-edit">Edit</button>
       </div>
+      <ul class="edit__projects-list flex" id='edit-projects-list'></ul>
       <form class="edit__form flex flex-fd-c" id="edit-form">
         <label class="fs-med fc-light" for="project-name">Project Name</label>
         <input
@@ -77,6 +95,16 @@
           class="fs-med fc-light"
         />
 
+                <label class="fs-med fc-light" for="auth-key"
+          >Authorization Key</label
+        >
+        <input
+          type="text"
+          id="auth-key"
+          name="auth-key"
+          class="fs-med fc-light"
+        />
+
         <div class="stack" id="radio-stack">
           <label class="fs-med fc-light" for="fullstack">Fullstack</label>
           <input
@@ -107,9 +135,14 @@
 
         <span class="edit__error fs-med" id="edit-error"></span>
 
-        <button class="edit__btn" type="submit" id="edit-btn">
-          <h2 class="fs-med fc-light">Submit Project</h2>
-        </button>
+        <div class="flex">
+          <button class="edit__btn" type="submit" id="edit-btn">
+            <h2 class="fs-med fc-light">Submit Project</h2>
+          </button>
+          <button class="edit__btn-delete" type="button" id="edit-btn-delete">
+            <h2 class="fs-med">Delete Project</h2>
+          </button>
+        </div>
       </form>
     </section>
 

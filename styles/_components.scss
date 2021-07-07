@@ -23,7 +23,7 @@
 
 @mixin menu-btn-hover {
   background-color: var(--color-white);
-  box-shadow: 0 0 7px white;
+  box-shadow: 0 0 7px var(--color-white);
 
   & > h2 {
     color: var(--color-black);
