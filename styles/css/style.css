@@ -1075,6 +1075,10 @@ li {
   padding: 50px;
 }
 
+.edit .hide-id {
+  display: none;
+}
+
 .edit__warning {
   display: none;
   position: absolute;
@@ -1192,7 +1196,9 @@ li {
   color: var(--color-black);
 }
 
-.edit__btn, .edit__btn-delete, .edit .btn-warnint-delete, .edit .btn-warnint-cancel {
+.edit__btn, .edit__btn-delete,
+.edit .btn-warnint-delete,
+.edit .btn-warnint-cancel {
   position: relative;
   z-index: 1;
   background-color: var(--color-black);
@@ -1213,45 +1219,58 @@ li {
   transition: none;
 }
 
-.edit__btn > h2, .edit__btn-delete > h2, .edit .btn-warnint-delete > h2, .edit .btn-warnint-cancel > h2 {
+.edit__btn > h2, .edit__btn-delete > h2,
+.edit .btn-warnint-delete > h2,
+.edit .btn-warnint-cancel > h2 {
   -webkit-transition: color ease-in-out 0.25s;
   transition: color ease-in-out 0.25s;
 }
 
-.edit__btn h2, .edit__btn-delete h2, .edit .btn-warnint-delete h2, .edit .btn-warnint-cancel h2 {
+.edit__btn h2, .edit__btn-delete h2,
+.edit .btn-warnint-delete h2,
+.edit .btn-warnint-cancel h2 {
   -webkit-transition: none;
   transition: none;
 }
 
-.edit__btn:hover, .edit__btn-delete:hover, .edit .btn-warnint-delete:hover, .edit .btn-warnint-cancel:hover {
+.edit__btn:hover, .edit__btn-delete:hover,
+.edit .btn-warnint-delete:hover,
+.edit .btn-warnint-cancel:hover {
   background-color: var(--color-white);
   -webkit-box-shadow: 0 0 7px var(--color-white);
           box-shadow: 0 0 7px var(--color-white);
 }
 
-.edit__btn:hover > h2, .edit__btn-delete:hover > h2, .edit .btn-warnint-delete:hover > h2, .edit .btn-warnint-cancel:hover > h2 {
+.edit__btn:hover > h2, .edit__btn-delete:hover > h2,
+.edit .btn-warnint-delete:hover > h2,
+.edit .btn-warnint-cancel:hover > h2 {
   color: var(--color-black);
 }
 
-.edit__btn-delete, .edit .btn-warnint-delete {
+.edit__btn-delete,
+.edit .btn-warnint-delete {
   border-color: var(--color-pink);
 }
 
-.edit__btn-delete > h2, .edit .btn-warnint-delete > h2 {
+.edit__btn-delete > h2,
+.edit .btn-warnint-delete > h2 {
   color: var(--color-pink);
 }
 
-.edit__btn-delete:hover, .edit .btn-warnint-delete:hover {
+.edit__btn-delete:hover,
+.edit .btn-warnint-delete:hover {
   background-color: var(--color-pink);
   -webkit-box-shadow: 0 0 7px var(--color-pink);
           box-shadow: 0 0 7px var(--color-pink);
 }
 
-.edit__btn-delete:hover > h2, .edit .btn-warnint-delete:hover > h2 {
+.edit__btn-delete:hover > h2,
+.edit .btn-warnint-delete:hover > h2 {
   color: var(--color-white);
 }
 
-.edit .btn-warnint-delete, .edit .btn-warnint-cancel {
+.edit .btn-warnint-delete,
+.edit .btn-warnint-cancel {
   background-color: var(--color-white);
 }
 
@@ -1280,6 +1299,11 @@ li {
 .edit__error {
   display: block;
   color: var(--color-pink);
+}
+
+.edit__success {
+  display: block;
+  color: var(--color-mint);
 }
 
 .error {
