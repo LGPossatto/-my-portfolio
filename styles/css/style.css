@@ -315,6 +315,7 @@ li {
 }
 
 .parallax {
+  overflow: hidden;
   position: absolute;
   z-index: -1;
   top: 0;

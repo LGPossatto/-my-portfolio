@@ -1,4 +1,4 @@
-import { data } from "./data.js";
+// import { data } from "./data.js";
 
 // -------------------------------------------------------------- //
 // ---------------------- crt/add projects ---------------------- //
@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const sadFace = document.getElementById("sad-face");
   const loading = document.getElementById("loading");
 
-  //const fetchRes = await fetch("http://localhost:5000/api/projects");
-  //const projectsData = (await fetchRes.json()).data;
-  const projectsData = data.data;
+  const fetchRes = await fetch(
+    "https://lg-portfolio-api.herokuapp.com/api/projects"
+  );
+  const projectsData = (await fetchRes.json()).data;
+  // const projectsData = data.data;
   const techSet = new Set();
   const filterList = [];
 
