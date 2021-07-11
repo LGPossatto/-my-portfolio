@@ -22,10 +22,17 @@
     }
   }
 
+  &__subtitle {
+    opacity: 0;
+    animation: opacityChange 1s ease-in-out 2s forwards;
+  }
+
   &__arrow {
     margin: 10px 0 15px;
 
-    animation: arrow-up-down 1s ease-in infinite alternate;
+    opacity: 0;
+    animation: arrow-up-down 1s ease-in infinite alternate,
+      opacityChange 1s ease-in-out 2s forwards;
 
     @include bp-med {
       width: 25px;

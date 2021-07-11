@@ -1,0 +1,17 @@
+.welcome {
+  position: fixed;
+  z-index: 10;
+
+  background-color: var(--color-black);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  animation: opacityChangePlusHidden 2s ease-in-out forwards;
+
+  & > span {
+    display: block;
+    margin: 0 auto 15%;
+  }
+}

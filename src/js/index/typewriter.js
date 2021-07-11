@@ -75,5 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // start writing function
-  writeFunction();
+  setTimeout(() => {
+    writeFunction();
+  }, 2000);
 });

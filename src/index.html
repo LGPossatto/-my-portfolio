@@ -16,6 +16,10 @@
   </head>
 
   <body class="body-colors">
+    <span class="welcome flex ai-c">
+      <span class="fs-biggest fc-light"> Bem Vindo! </span>
+    </span>
+
     <section class="parallax" id="parallax">
       <img
         class="parallax__icon icon-tiny icon-html"
@@ -243,19 +247,34 @@
           </p>
         </div>
         <div class="footer__info">
-          <div class="link-helper link-helper-green">
+          <div
+            class="link-helper link-helper-green info-div-helper"
+            title="Copiar"
+            value="LGPossatto@gmail.com"
+            id="icon-copy"
+          >
+            <span class="copied-tooltip fs-med">Copiado</span>
             <i class="fas fa-envelope fs-biggest fc-light"></i>
           </div>
           <p class="fs-med fc-light">
-            Entre em contato através do meu email LGPossatto@gmail.com
+            Entre em contato através do meu email
+            <span
+              class="
+                link-helper link-helper-green
+                info-span-helper
+                fs-med
+                fc-light
+              "
+              title="Copiar"
+              id="email-copy"
+              >LGPossatto@gmail.com
+              <span class="copied-tooltip fs-med">Copiado</span>
+            </span>
           </p>
         </div>
       </div>
     </footer>
 
-    <script src="./js/index/toggleBtn.js"></script>
-    <script src="./js/index/parallaxEffect.js"></script>
-    <script src="./js/index/typewriter.js"></script>
-    <script src="./js/index/projectsSection.js" type="module"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

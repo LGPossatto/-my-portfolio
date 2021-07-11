@@ -13,8 +13,10 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
+
+  animation: changeOverflow 1.75s step-end forwards;
 }
 
 html {

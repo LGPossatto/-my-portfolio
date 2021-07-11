@@ -1,3 +1,23 @@
+@-webkit-keyframes changeOverflow {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes changeOverflow {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+    overflow-x: hidden;
+  }
+}
+
 @-webkit-keyframes arrow-up-down {
   from {
     -webkit-transform: translateY(-7px) rotate(-90deg);
@@ -56,6 +76,32 @@
   }
 }
 
+@-webkit-keyframes opacityChangePlusHidden {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes opacityChangePlusHidden {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 @-webkit-keyframes loading {
   100% {
     -webkit-transform: rotate(0deg);
@@ -94,8 +140,10 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
+  -webkit-animation: changeOverflow 1.75s step-end forwards;
+          animation: changeOverflow 1.75s step-end forwards;
 }
 
 html {
@@ -314,6 +362,23 @@ li {
   color: var(--color-white);
 }
 
+.welcome {
+  position: fixed;
+  z-index: 10;
+  background-color: var(--color-black);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: opacityChangePlusHidden 2s ease-in-out forwards;
+          animation: opacityChangePlusHidden 2s ease-in-out forwards;
+}
+
+.welcome > span {
+  display: block;
+  margin: 0 auto 15%;
+}
+
 .parallax {
   overflow: hidden;
   position: absolute;
@@ -392,98 +457,101 @@ li {
 .parallax .icon-html {
   top: 65%;
   left: 25%;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .parallax .icon-css {
   top: 75%;
   left: 90%;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
 }
 
 .parallax .icon-sass {
   top: 65%;
   left: 75%;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 .parallax .icon-javascript {
   top: 35%;
   left: 85%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .parallax .icon-typescript {
   top: 31%;
   left: 89%;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .parallax .icon-react {
   top: 15%;
   left: -10%;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
 }
 
 .parallax .icon-redux {
   top: 35%;
   left: 25%;
-  -webkit-animation-delay: 2.25s;
-          animation-delay: 2.25s;
+  -webkit-animation-delay: 4.25s;
+          animation-delay: 4.25s;
 }
 
 .parallax .icon-nodejs {
   top: 5%;
   left: 60%;
-  -webkit-animation-delay: 1.25s;
-          animation-delay: 1.25s;
+  -webkit-animation-delay: 3.25s;
+          animation-delay: 3.25s;
 }
 
 .parallax .icon-deno {
   top: -2%;
   left: 20%;
-  -webkit-animation-delay: 60s;
-          animation-delay: 60s;
+  -webkit-animation-delay: 90s;
+          animation-delay: 90s;
 }
 
 .parallax .icon-graphql {
   top: 62%;
   left: 5%;
-  -webkit-animation-delay: 2.75s;
-          animation-delay: 2.75s;
+  -webkit-animation-delay: 4.75s;
+          animation-delay: 4.75s;
 }
 
 .parallax .icon-apollo {
   top: 75%;
   left: 5%;
-  -webkit-animation-delay: 3.25s;
-          animation-delay: 3.25s;
+  -webkit-animation-delay: 5.25s;
+          animation-delay: 5.25s;
 }
 
 .parallax .icon-firebase {
   top: 70%;
   left: 35%;
-  -webkit-animation-delay: 1.25s;
-          animation-delay: 1.25s;
+  -webkit-animation-delay: 3.25s;
+          animation-delay: 3.25s;
 }
 
 .parallax .icon-mongodb {
   top: 80%;
   left: 70%;
-  -webkit-animation-delay: 1.75s;
-          animation-delay: 1.75s;
+  -webkit-animation-delay: 3.75s;
+          animation-delay: 3.75s;
 }
 
 .nav {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  opacity: 0;
+  -webkit-animation: opacityChange 1s ease-in-out 2s forwards;
+          animation: opacityChange 1s ease-in-out 2s forwards;
 }
 
 .nav__helper {
@@ -567,6 +635,7 @@ li {
   display: block;
   width: 100%;
   margin: 10px 0;
+  font-weight: 700;
 }
 
 .nav__items > :first-child,
@@ -666,10 +735,17 @@ li {
   }
 }
 
+.header__subtitle {
+  opacity: 0;
+  -webkit-animation: opacityChange 1s ease-in-out 2s forwards;
+          animation: opacityChange 1s ease-in-out 2s forwards;
+}
+
 .header__arrow {
   margin: 10px 0 15px;
-  -webkit-animation: arrow-up-down 1s ease-in infinite alternate;
-          animation: arrow-up-down 1s ease-in infinite alternate;
+  opacity: 0;
+  -webkit-animation: arrow-up-down 1s ease-in infinite alternate, opacityChange 1s ease-in-out 2s forwards;
+          animation: arrow-up-down 1s ease-in infinite alternate, opacityChange 1s ease-in-out 2s forwards;
 }
 
 @media (max-width: 1366px) {
@@ -1036,6 +1112,8 @@ li {
 }
 
 .footer__info .link-helper {
+  cursor: pointer;
+  position: relative;
   text-decoration: underline;
   font-weight: 700;
   -webkit-transition: color 0.25s ease-in-out;
@@ -1069,6 +1147,33 @@ li {
 
 .footer__info .link-helper-green:hover i {
   color: var(--color-mint);
+}
+
+.footer__info .info-div-helper {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.footer__info .info-span-helper {
+  position: relative;
+}
+
+.footer__info .copied-tooltip {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: var(--color-white);
+  padding: 5px;
+  opacity: 0;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 7px var(--color-white);
+          box-shadow: 0 0 7px var(--color-white);
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .edit {
