@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerTitle = document.getElementById("title-helper").children;
 
   const inicialText = ["Olá,", "me chamo Luiz Gustavo", "e sou um"];
-  const textArray = ["desenvolvedor web", "engenheiro", "progamador"];
+  const textArray = ["desenvolvedor web", "progamador frontend", "engenheiro"];
 
   const typeWriter = (text, element, revert = false) => {
     let textIndex = 0;

@@ -142,8 +142,8 @@ html,
 body {
   overflow: hidden;
   width: 100%;
-  -webkit-animation: changeOverflow 1.75s step-end forwards;
-          animation: changeOverflow 1.75s step-end forwards;
+  -webkit-animation: changeOverflow 1.25s step-end forwards;
+          animation: changeOverflow 1.25s step-end forwards;
 }
 
 html {
@@ -543,6 +543,13 @@ li {
   left: 70%;
   -webkit-animation-delay: 3.75s;
           animation-delay: 3.75s;
+}
+
+.parallax .icon-gulp {
+  top: 60%;
+  left: 95%;
+  -webkit-animation-delay: 5.75s;
+          animation-delay: 5.75s;
 }
 
 .nav {
@@ -1227,13 +1234,19 @@ li {
   margin: 25px 0;
 }
 
-.edit__form input {
+.edit__form input,
+.edit__form textarea {
   background-color: var(--color-black);
   max-width: 500px;
   margin-bottom: 25px;
   outline: none;
   border: none;
   border-bottom: 2px solid var(--color-white);
+}
+
+.edit__form textarea {
+  padding: 5px;
+  border: 2px solid var(--color-white);
 }
 
 .edit__form input.radio {

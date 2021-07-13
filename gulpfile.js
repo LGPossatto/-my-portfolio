@@ -8,13 +8,9 @@ const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 
-const copyIcons = () => {
-  return src("src/icon/*.*").pipe(dest("dist/icons"));
-};
-
 const handleHTML = () => {
   return src("src/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
     .pipe(dest("dist/"));
 };
 
@@ -45,10 +41,4 @@ const handleEditJs = () => {
     .pipe(dest("dist/js"));
 };
 
-exports.default = series(
-  copyIcons,
-  handleHTML,
-  handleSass,
-  handleIndexJs,
-  handleEditJs
-);
+exports.default = series(handleHTML, handleSass, handleIndexJs, handleEditJs);

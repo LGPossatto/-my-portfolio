@@ -48,7 +48,8 @@
   &__form {
     margin: 25px 0;
 
-    input {
+    input,
+    textarea {
       background-color: var(--color-black);
 
       max-width: 500px;
@@ -57,6 +58,11 @@
       outline: none;
       border: none;
       border-bottom: 2px solid var(--color-white);
+    }
+
+    textarea {
+      padding: 5px;
+      border: 2px solid var(--color-white);
     }
 
     input.radio {
