@@ -5,7 +5,7 @@ const htmlmin = require("gulp-htmlmin");
 const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 
-const uglify = require("gulp-uglify");
+const terser = require("gulp-terser");
 const concat = require("gulp-concat");
 
 const copyFavicon = () => {
@@ -34,14 +34,14 @@ const handleIndexJs = () => {
     "src/js/index/projectsSection.js",
   ])
     .pipe(concat("main.js"))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(dest("dist/js"));
 };
 
 const handleEditJs = () => {
   return src("src/js/edit/*.js")
     .pipe(concat("edit.js"))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(dest("dist/js"));
 };
 
