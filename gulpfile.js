@@ -8,6 +8,10 @@ const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 
+const copyFavicon = () => {
+  return src("src/icons/fav.svg").pipe(dest("dist/icons"));
+};
+
 const handleHTML = () => {
   return src("src/*.html")
     .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
@@ -41,4 +45,10 @@ const handleEditJs = () => {
     .pipe(dest("dist/js"));
 };
 
-exports.default = series(handleHTML, handleSass, handleIndexJs, handleEditJs);
+exports.default = series(
+  copyFavicon,
+  handleHTML,
+  handleSass,
+  handleIndexJs,
+  handleEditJs
+);
