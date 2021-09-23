@@ -1,4 +1,6 @@
 # About
+*This is no my portfolio and will not be updated anymore!
+
 This is a project made to be my portfolio, here you can find more about me and look at some of my projects.
 You can access the site here https://luizgustavo.netlify.app/, or here https://lg-portfolio-api.herokuapp.com. 
 If you opt to use the Heroku link you will fetch the projects faster because everything is on the same server.  
